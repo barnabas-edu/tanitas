@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Kezdőlap</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<center>
+    <header>
+        <nav>
+            <ul>
+            <li class="nav__links"><a href="index.html">Kezdőlap</a></li>
+            <li class="nav__links"><a href="altkem.html">Általános kémia</a></li>          
+            <li class="nav__links"><a href="szervetlen.html">Szervetlen kémia</a></li>
+			<li class="nav__links"><a href="szerves.html">Szerves kémia</a></li>
+            </ul>
+        </nav>
+        
+    </header></center>
+<script type="text/JavaScript">
+        window.addEventListener("scroll" ,function() {
+    let header = document.querySelector("header");
+    header.classList.toggle("sticky", window.scrollY > 0);
+});
+    </script>
+<h1>Kezdőlap</h1>
+<center><p>Ezen az oldalon a Mozaik "Kémia 11-12. Közép- és emelt szintű érettségire készülőknek" című tankönyv (MS-3151) fejezeteinek feldolgozásuk és kibővítésük alapján készült.</p>
+<a href=https://www.mozaweb.hu/hu/course.php?cmd=single_book&bid=MS-3151 target="_blank"><img li src="images/kem11-12.jpg" alt="Kémia 11-12. Közép- és emelt szintű érettségire készülőknek" width="auto" height="400px"></a>
+<h6><a href=https://www.mozaweb.hu/hu/course.php?cmd=single_book&bid=MS-3151 target="_blank">Kémia 11-12. Közép- és emelt szintű érettségire készülőknek</a></h6></center>
+</body>
+</html>
