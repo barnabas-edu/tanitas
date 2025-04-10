@@ -1,0 +1,338 @@
+.actual-page {
+    text-align: center;
+    padding: 0;
+    margin-bottom: -5px;
+}
+
+#btnScrollTop {
+  display: none;
+  width: 45px;
+  height: 44px;
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  padding-top: 3px;
+  z-index: 99;
+  font-size: 23px;
+}
+
+#btnScrollTop:focus {
+    opacity: 1.0;
+}
+
+ul.quick-links {
+    margin: 10px 0;
+}
+
+ul.quick-links > li > a {
+    display: inline-block;
+    width: 100%;
+    line-height: 2.0em;
+}
+
+span.link-icon {
+    padding-right: 10px;
+}
+
+span.link-text {
+    text-decoration: underline;
+}
+
+span.link-sub {
+    color: red;
+    font-size: 0.7em;
+}
+
+span.link-cikk {
+    color: rgb(162,162,162);
+    position: relative;
+    top: 4px;
+}
+
+ul.quick-links li a {
+    display: flex !important;
+    align-items: baseline;
+}
+
+aside h6 {
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
+}
+
+div.id-card {
+    margin: 10px auto;
+    padding: 25px 5px;
+    border-radius: 10px;
+    text-align: center !important;
+    background-color: rgb(212, 212, 216);
+    background-color: rgb(240, 240, 255);
+    background-image: linear-gradient(rgb(255, 184, 77), rgb(255,255,255));
+    background-image: linear-gradient(rgb(255, 255, 255), rgb(244, 244, 244));
+    background-image: linear-gradient(rgb(250, 250, 255), rgb(236, 236, 240));
+    background-image: linear-gradient(rgb(255, 255, 167), rgb(255, 184, 77));
+    background-image: linear-gradient(rgb(255,255,212), rgb(255, 255, 167));
+}
+
+div.id-card dl {
+    line-height: 2.0em;
+    text-align: center !important;
+}
+
+div.id-card dt {
+    font-weight: 500 !important;
+}
+
+div.id-card img {
+    width: 125px;
+    height: 125px;
+    border-radius: 50%;
+    margin: 10px auto 20px auto;
+}
+
+div.id-card span.anonymous {
+    display: inline-block;
+    font-size: 90px;
+    color: rgb(212, 212, 216);
+    color: rgb(255, 224, 117);
+    width: 125px;
+    height: 125px;
+    border: 5px solid rgb(212, 212, 216);
+    border: 5px solid rgb(255, 224, 117);
+    border-radius: 50%;
+    margin: 10px auto 20px auto;
+}
+
+div.id-card .fogadoora {
+    display: inline-block;
+}
+
+div.id-card .name {
+    font-size: 1.2em;
+}
+
+div.doc-card {
+    margin: 10px auto;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: rgb(240, 240, 255);
+    background-color: rgb(245, 245, 255);
+    background-image: linear-gradient(rgb(253, 253, 255), rgb(240, 240, 245));
+}
+
+.video-responsive {
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    position: relative;
+    height: 0;
+}
+
+.video-responsive iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    border-radius: 0;
+}
+
+#footerContainer {
+    margin-top: 20px;
+}
+
+footer section.logos,
+footer section.info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: auto;
+}
+
+footer.spage section.logos,
+footer.spage section.info {
+    max-width: 1200px;
+}
+
+footer section.logos img {
+    height: 60px;
+    margin: 5px;
+}
+
+footer section.logos a {
+    margin: 5px !important;
+}
+
+footer section.logos a:focus {
+    opacity: 1;
+}
+
+
+footer section.info {
+    padding-top: 5px;
+    margin: 5px auto;
+    justify-content: center;
+}
+
+footer section.info span,
+footer section.info a {
+    padding: 5px 10px;
+    color: white !important;
+    justify-content: center !important;
+    text-align: center;
+}
+
+footer section.info a {
+    text-decoration: underline;
+    
+}
+
+footer section.info a:hover,
+footer section.info a:focus {
+    color: #f03 !important;
+    background-color: white;
+}
+
+#divQuickLinksContainer {
+        background-color: transparent;
+        align-items: center;
+    }
+
+#divQuickLinksContainer.spage {
+    margin-top: 5px;
+    padding: 0;
+}
+
+#divQuickLinksContainer2 {
+        width: 100%;
+        margin: 0 !important;
+        padding: 0 !important;
+        border-radius: 5px! important;
+        overflow: hidden;
+    }
+
+#navQuickLinks {
+        display: flex;
+        align-items: center;
+    }
+
+#navQuickLinks.spage {
+        margin: 0 !important;
+        padding:0 10px !important;
+    }
+
+#navQuickLinks a {
+        display: flex;
+        align-items: center;
+        text-decoration: underline;
+    }
+    
+#navQuickLinks a:hover, #navQuickLinks a:focus {
+        background-color: #127;
+        background-color: rgba(17, 34, 119, 0.9);
+    }
+
+#mainContainer {
+    margin: 10px auto;
+}
+
+#mainContainer.spage {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+main.spage {
+    width: 100%;
+}
+
+header h1 {font-size: 2.0em !important;}
+
+@media screen and (min-width: 375px) {
+    header h1 {font-size: 2.1em !important;}
+}
+
+@media screen and (min-width: 665px) {
+    header h1 {font-size: 2.5em !important;}
+    .id-card {
+        width: 48%;
+    }
+    #idCardContainer{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around !important;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .card-container {padding: 10px;}
+    #divQuickLinksContainer {
+        height: 50px;
+        position: relative;
+        top: -50px;
+        margin-bottom: -50px;
+        background-color: transparent;
+        align-items: center;
+    }
+    #divQuickLinksContainer.spage {
+        margin-top: 50px;
+        padding: 0 10px;
+    }
+    #navQuickLinks {
+        display: flex;
+        height: 50px;
+        align-items: center;
+    }
+    #navQuickLinks a {
+        display: flex;
+        height: 50px;
+        align-items: center;
+        text-decoration: underline;
+    }
+    #navQuickLinks a:hover, #navQuickLinks a:focus {
+        background-color: #127;
+        background-color: rgba(17, 34, 119, 0.9);
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    #divContent {display: flex;}
+    header h1 {font-size: 3.0em !important;}
+    main {width: 49.999%;}
+    .id-card {width: 31%;}
+    aside {width: 49.999%;}
+}
+
+@media screen and (min-width: 1280px) {
+    header h1{font-size: 4.0em !important;}
+    main {width: 66.666%;}
+    .cols-container {
+        column-count: 2;
+        column-gap: 0;
+        opacity: 0.1;
+    }
+    aside {width: 33.333%;}
+    .id-card {width: 31%;}
+}
+
+@media screen and (min-width: 1360px) {
+    header h1{font-size: 4.0em !important;}
+    ul.dokumentumok li {
+        width: 49%;
+    }
+    ul.dokumentum-hivatkozasok li {
+        width: 49%;
+    }
+}
+
+@media screen and (min-width: 1500px) {
+    header h1 {font-size: 5.5em !important;}
+}
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,919 @@
+@import url('https://fonts.googleapis.com/css?family=Exo|Marcellus');
+
+html {
+    scroll-behavior: smooth;
+    background-color: rgb(8,25,30);
+    background-color: rgb(0,0,0);
+}
+	
+body {
+	font-size: 1.05em !important;
+	line-height: 1.75em !important;
+	background-color: rgb(230, 230, 232);
+	color: rgb(12,12,32) !important;
+	margin: 0 !important;
+	padding: 0 !important;
+	word-wrap: break-word !important;
+	font-family: Exo, Arial, sans-serif !important;
+}
+
+.visually-hidden {display: none;}
+
+iframe {border-radius: 5px;}
+
+.color-white {
+    background-color: rgb(255, 255, 255);
+    background-image: linear-gradient(rgb(255, 255, 255), rgb(225, 225, 225));
+}
+
+.color-red {
+    color: white;
+    background-color: rgb(244,67,54);
+    background-image: linear-gradient(rgb(255, 97, 74), rgb(192, 27, 14));
+}
+
+.color-green {
+    color: white;
+    background-color: rgb(76,175,80);
+    background-image: linear-gradient(rgb(76, 175, 80), rgb(20, 115, 25));
+}
+
+.color-blue {
+    color: white;
+    background-color: rgb(33,150,243);
+    background-image: linear-gradient(rgb(33,150,243), rgb(0, 80, 173));
+}
+
+.color-orange {
+    color: white;
+    background-color: rgb(254,144,0);
+    background-image: linear-gradient(rgb(254,144,0), rgb(192,92,0));
+}
+
+.color-deep-orange {
+    color: white;
+    background-color: rgb(255,87,34);
+    background-image: linear-gradient(rgb(255,87,34), rgb(192,34,0));
+}
+
+.color-teal {
+    color: white;
+    background-color: rgb(0,150,136);
+    background-image: linear-gradient(rgb(0,150,136), rgb(0,100,86));
+}
+
+.color-teal-black {
+    color: white;
+    background-color: rgb(0,100,86);
+    background-image: linear-gradient(rgb(0,100,86), rgb(0,0,0));
+}
+
+.color-blue-gray {
+    color: white;
+    background-color: rgb(96,125,139);
+    background-image: linear-gradient(rgb(96,125,139), rgb(60,80,90));
+    background-image: linear-gradient(rgb(96,125,139), rgb(8,25,30));
+}
+
+.color-blue-gray-black {
+    color: white;
+    background-color: rgb(72,96,132);
+    background-image: linear-gradient(rgb(96,125,139), rgb(0,0,0));
+}
+
+.color-blue-black {
+    color: white;
+    background-color: rgb(63, 81, 181);
+    background-image: linear-gradient(rgb(30, 45, 115), rgb(0,0,0));
+}
+
+.color-gray {
+    color: white;
+    background-color: rgb(150,150,155);
+    background-image: linear-gradient(rgb(150,150,155), rgb(80,80,85));
+}
+
+.color-silver {
+    color: black;
+    background-color: rgb(192,192,212);
+    background-image: linear-gradient(rgb(240,240,245), rgb(170,170,175));
+}
+
+.color-white-blue {
+    color: black;
+    background-color: rgb(192,192,212);
+    background-image: linear-gradient(rgb(240,240,255), rgb(172,172,212));
+}
+
+.color-black {
+    color: white;
+    background-color: rgb(64,64,64);
+    background-image: linear-gradient(rgb(52,52,52), rgb(9,9,9));
+}
+
+.color-tomato {
+    color: white;
+    background-color: rgb(255,99,71);
+    background-image: linear-gradient(rgb(255,119,91), rgb(200,50,22));
+}
+
+.color-royal-blue {
+    color: white;
+    background-color: rgb(0, 35, 102);
+    background-image: linear-gradient(rgb(63, 81, 181), rgb(30, 45, 115));
+}
+
+.color-amber {
+    color: white;
+    background-color: rgb(255,191,0);
+    background-image: linear-gradient(rgb(255,191,0), rgb(192,112,0));
+}
+
+.color-pink {
+    color: white;
+    background-color: rgb(â€Ž255, 84, 128);
+    background-image: linear-gradient(rgb(255, 92, 132), rgb(196, 0, 128));
+}
+
+.color-indigo {
+    color: white;
+    background-color: rgb(75, 0, 130);
+    background-image: linear-gradient(rgb(128, 0, 255), rgb(75, 0, 130));
+}
+
+.color-red-opac {
+    color: white;
+    
+    background-image: linear-gradient(rgba(255, 97, 74, 0.75), rgba(214, 37, 24, 0.75));
+}
+
+.color-green-opac {
+    color: white;
+    background-color: rgb(76,175,80);
+    background-color: rgba(76,175,80,0.75);
+}
+
+.color-blue-opac {
+    color: white;
+    background-color: rgb(33,150,243);
+    background-color: rgba(33,150,243,0.75);
+
+}
+
+.color-orange-opac {
+    color: white;
+    background-color: rgb(254,144,0);
+    background-color: rgba(254,144,0,0.75);
+}
+
+.color-deep-orange-opac {
+    color: white;
+    background-color: rgb(255,87,34);
+    background-color: rgba(255,87,34,0.75);
+}
+
+.color-teal-opac {
+    color: white;
+    background-color: rgb(0,150,136);
+    background-color: rgba(0,150,136,0.75);
+}
+
+.color-blue-gray-opac {
+    color: white;
+    background-color: rgb(96,125,139);
+    background-color: rgba(96,125,139,0.75);
+}
+
+.color-gray-opac {
+    color: white;
+    background-color: rgb(150,150,155);
+    background-color: rgba(150,150,155,0.75);
+    
+}
+
+.color-white-opac {
+    
+    
+    background-image: linear-gradient(rgb(255, 255, 255, 0.75), rgba(255, 255, 255, 1.0));
+}
+
+.color-black-opac {
+    color: white;
+    background-color: rgb(64,92,92);
+    background-color: rgba(48,48,48,0.75);
+}
+
+
+.google-map {
+    border: 0;
+    width: 100%;
+    height: auto;
+    min-height:300px;
+}
+
+button {
+    border: none;
+    outline: none !important;
+    cursor: pointer;
+    background-color: transparent;
+    color: white;
+    text-align: center;
+    vertical-align: middle;
+}
+
+button.toogle-button {
+    background-color: rgb(63, 81, 181);
+    background-color: rgb(162, 162, 162);
+    background-image: linear-gradient(rgb(162, 162, 162), rgb(132, 132, 132));
+    background-image: linear-gradient(rgb(33,150,243), rgb(33, 140, 192));
+    text-align: left;
+    font-size: 1.2em;
+    padding: 3px 10px;
+    border-radius: 5px;
+    margin: 7px 0;
+    width: 100%;
+    
+}
+
+button.dokumentumok > h3
+{
+    font-size: 1.0em !important;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: baseline;
+}
+
+button.toogle-opened
+{
+    background-color: rgb(46, 145, 50);
+    background-image: linear-gradient(rgb(70, 185, 75), rgb(46, 145, 50));
+}
+
+button.toogle-button:active,
+button.toogle-button:focus
+{
+    background-color: rgb(244, 67, 54);
+    background-image: linear-gradient(rgb(255, 112, 92), rgb(244, 67, 54));
+}
+
+button.toogle-button:hover
+{
+    background-color: rgb(244, 67, 54);
+    background-image: linear-gradient(rgb(33, 140, 192), rgb(30, 112, 144));
+}
+
+button.toogle-button span {
+    padding: 0 !important;
+    font-size: 0.65em;
+    margin: 0 15px 0 0 !important;
+}
+
+div.dokumentumok {
+    display: none;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 10px 0 40px;
+    overflow: hidden;
+}
+
+div.dokumentumok button.toogle-button {
+    width: 100%;
+    background-color: rgb(33,150,243);
+    font-size: 1.0em;
+}
+
+div.dokumentumok button.dokumentumok > h4 {
+    font-size: 1.0em !important;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: baseline;
+}
+
+div.dokumentumok button.toogle-opened
+{
+    background-color: rgb(70, 185, 75);
+}
+
+div.dokumentumok button.toogle-button:active,
+div.dokumentumok button.toogle-button:focus
+{
+    background-color: rgb(244, 67, 54);
+}
+
+div.dokumentumok button.toogle-button:hover
+{
+    background-color: rgb(244, 67, 54);
+    background-image: linear-gradient(rgb(33, 140, 192), rgb(30, 112, 144));
+}
+
+div.dokumentumok button.toogle-button span {
+    font-size: 0.65em;
+    margin: 0 15px 0 0 !important;
+}
+
+ul.dokumentumok {
+    display: none;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+}
+
+ul.dokumentum-hivatkozasok {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+}
+
+ul.dokumentumok li,
+ul.dokumentum-hivatkozasok li {
+    width: 100%;
+}
+
+ul.dokumentumok li a,
+ul.dokumentum-hivatkozasok li a
+{
+    display: inline-block;
+    width: 100%;
+    display: flex;
+    align-items: baseline;
+}
+
+ul.cikkek li a {
+    display: flex;
+}
+
+ul.subpage-menulinks {
+    line-height: 2.0em;
+}
+
+.toogle-content {
+    display: none;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.75s ease-out;
+}
+
+a {
+    text-decoration: none;
+    border: none;
+    outline: none !important;
+}
+
+.card-container {
+    padding: 10px 0 0 0;
+    
+}
+
+.card {
+    overflow: hidden;
+    background-color: white;
+
+}
+
+.header-link {
+    padding: 0;
+    overflow: hidden;
+}
+
+.header-link h3 {
+    margin: 0;
+}
+
+.header-link a {
+    color: white !important;
+    text-decoration: underline;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    padding: 10px 15px;
+    
+}
+
+.header-link a:hover,
+.header-link a:active,
+.header-link a:focus {
+    background-color: black;
+    background-color: rgba(0,0,0,0.35);
+}
+
+div.w3-container {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#divQuickLinksContainer {
+    width: 100%;
+    background-color: transparent;
+    opacity: 0.95;
+}
+
+#divQuickLinksContainer2 {
+    margin: 0 auto;
+}
+
+#navQuickLinks {
+    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    color: white;
+    background-color: rgba(63, 81, 181, 0.95);
+    background-image: linear-gradient(rgb(63, 81, 181), rgb(35, 50, 120));
+    opacity: 0.95;
+    z-index: 15;
+}
+
+#navQuickLinks a {
+    align-items: center;
+    padding: 3px 10px;
+    color: white !important;
+}
+
+#mainContainer {
+    margin: 0 auto;
+    max-width: 1700px;
+}
+
+#mainContainer ul, #mainContainer ul li {list-style: none !important;}
+
+#mainContainer a {
+    color: #03f;
+}
+
+#mainContainer a:hover,
+#mainContainer a:focus {
+    color:#f03;
+}
+
+p {
+    margin-top: 0.75em;
+    margin-bottom: 0.75em;
+}
+
+p.sign {
+    text-align: right;
+    font-style: italic;
+    margin-right: 20px;
+}
+
+h2, h3, h4, h5, h6, p, ul, ul li {
+    font-family: 'Exo', Arial, sans-serif !important;
+}
+
+h2 {font-size: 1.3em !important;}
+h3 {font-size: 1.25em !important;}
+h4 {font-size: 1.2em !important;}
+h5 {font-size: 1.15em !important;}
+h6 {font-size: 1.1em !important;}
+
+h3.subpage, h4.subpage, h5.subpage {
+    padding: 5px 0 5px 10px;
+    border-radius: 5px;
+}
+
+h3.subpage {
+    background-image: linear-gradient(to right, rgb(255, 184, 77), rgb(255,255,255));
+}
+
+h4.subpage {
+    background-image: linear-gradient(to right, rgb(255, 224, 117), rgb(255,255,255), rgb(255,255,255));
+}
+
+h5.subpage {
+    background-image: linear-gradient(to right, rgb(255, 255, 167), rgb(255,255,255), rgb(255,255,255), rgb(255,255,255));
+}
+
+.card img {width: 100%;}
+
+span.icon-file-pdf, span.icon-aid-kit {color: red !important;}
+span.icon-file-word {color: blue !important;}
+span.icon-file-excel {color: green !important;}
+
+ul.marked {
+  list-style: none;
+  width: 100%;
+  font-size: 1.05em !important;
+}
+
+ul.marked li {
+  display: flex;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+ul.marked li a {
+  display: inline: block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  text-decoration: underline;
+}
+
+ul.marked li span {
+  display: inline-block;
+}
+
+ul.marked li::before {
+  content: "\2023";
+  color: red;
+  font-weight: bold;
+  display: inline-block;
+  width: 1.0em;
+  margin-right: 5px;
+}
+
+dl dt {
+    font-weight: bold;
+}
+
+dl dd {
+    margin-left: 20px;
+}
+
+div.id-card dl dd {
+    margin-left: 0;
+}
+
+ol {
+    margin: 10px 25px;
+}
+
+ol li {
+    padding-left: 5px;
+    font-weight: bold;
+}
+
+ol li > * {
+    font-weight: normal;
+}
+
+div.table-container {
+    overflow: hidden;
+    overflow-x: auto;
+    border: thin solid white;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table caption {
+    font-weight: 700;
+    margin: 10px 0;
+}
+
+td, th { 
+  padding: 7px; 
+  text-align: left;
+}
+
+thead {
+    font-weight: 700;
+    background-color: rgb(192,192,212);
+    background-image: linear-gradient(rgb(255, 255, 167), rgb(255, 184, 77));
+}
+
+tbody tr:nth-of-type(even) { 
+  background: rgb(250, 250, 192);
+}
+
+table.tb-silver thead {
+    font-weight: 700;
+    background-color: rgb(192,192,212);
+    background-image: linear-gradient(rgb(250,250,252), rgb(182,182,186));
+}
+
+table.tb-silver tbody tr:nth-of-type(even) { 
+  background: rgb(236,236,236);
+}
+
+tbody tr:nth-last-of-type(1) { 
+  border-bottom: thin solid rgb(236,236,236);
+}
+
+details {
+    margin: 15px 0;
+}
+
+details summary {
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    outline: none !important;
+    padding: 5px;
+    background-image: linear-gradient(to right, rgb(255, 184, 77), rgb(255,255,255), rgb(255,255,255));
+    background-image: linear-gradient(to right, rgb(255, 224, 117), rgb(255,255,255), rgb(255,255,255));
+    font-size: 1.1em;
+}
+
+details p {
+    border: thin solid rgb(255,255,212);
+    border-radius: 5px;
+    padding: 10px;
+    background-image: linear-gradient(rgb(250, 250, 255), rgb(236, 236, 240));
+    background-image: linear-gradient(rgb(255,255,212), rgb(255, 255, 167));
+    font-size: 1.02em;
+    color: black;
+}
+
+footer {
+    margin: 10px auto 0 auto !important;
+}
+
+.card p a {text-decoration: underline;}
+
+.card div.img-subtitle {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    width: 100%;
+}
+
+.card div.img-subtitle2 {
+    padding: 5px 7px 0 7px!important;
+    border-radius: 0 3px 0 0;
+    color: rgb(192, 0, 0) !important;
+}
+
+.card div.img-subtitle3 {
+    padding: 5px 7px 0 7px!important;
+    border-radius: 3px 0 0 0;
+    opacity: 0.75;
+}
+
+#headerContainer {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: #3f51b5;
+    overflow: hidden;
+    height: 100vh;
+    -webkit-height: 100vh;
+    -moz-height: 100vh;
+    -ms-height: 100vh;
+    -o-height: 100vh;
+}
+
+#headerContainer > div {
+	height: 100% !important;
+}
+
+#headerContainer > div > img {
+	margin-left: 50%;
+	-ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+	height: 100% !important;
+}
+
+header h1 {
+    font-size: 1.6em !important;
+    font-weight: bold;
+	line-height: 1.5em;
+	text-align: center;
+	color: rgb(255,255,255);
+	font-family: 'Marcellus', 'Times New Roman', 'FreeSerif', serif;
+	text-shadow: 4px 4px 8px black;
+	opacity: 0.95;
+	cursor: default;
+}
+
+/* GalÃ©ria */
+#divGaleriaContainer {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0; 
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index:100;
+}
+
+#divGaleriaContainer > div {
+    z-index: 105;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+#divGaleriaContainer button.close-change {
+    display: inline-block;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.6);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+
+#divGaleriaContainer button.close-change > span.icon-enlarge2,
+#divGaleriaContainer button.close-change > span.icon-shrink2,
+#divGaleriaContainer button.close-change > span.icon-cross {
+    position: relative;
+    left: 1px;
+    top: 1px;
+}
+
+#divGaleriaContainer button.pager {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 100%;
+    z-index: 103;
+}
+
+#divGaleriaContainer button.pager > span.icon-circle-left,
+#divGaleriaContainer button.pager > span.icon-circle-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.0em;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.6);
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+}
+
+#divViewImage {
+    width: 100%;
+    float: left;
+}
+
+#divViewImage > div {
+    width: 100%;
+    height: 100%;
+}
+
+#divViewImage2 {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#imgDisplay {
+    display: block;
+}
+
+#divImageNum {
+    font-size: 1.05em;
+    left: 10px !important;
+    padding: 5px !important;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.6);
+    color: white;
+    border-radius: 5px;
+    z-index: 102;
+}
+
+#divImageNum span {
+    display: inline-block;
+    margin-top: 5px;
+    padding: 0 5px;
+}
+
+#divImageInfo {
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.7);
+    color: white;
+    text-align: center;
+    width: 100%;
+    z-index: 105;
+}
+
+#divThumbsImage {
+    width: 100%;
+    height: 225px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    white-space: nowrap;
+    padding-top: 5px;
+    float: right;
+}
+
+#divThIm2 {
+    overflow: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    white-space: nowrap;
+}
+
+#divThumbsImage a.img-thumb-container > div > img {
+    opacity: 0.6;
+}
+
+#divThumbsImage a.img-thumb-container > div {
+    width: 100px !important;
+    height: 100px !important;
+    margin: 3px;
+    overflow: visible;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+#divThumbsImage a.img-thumb-container > div > img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#divThumbsImage a.img-thumb-container:hover > div,
+#divThumbsImage a.img-thumb-container:focus> div {
+    padding: 0;
+}
+
+#divThumbsImage a.img-thumb-container:hover > div > img,
+#divThumbsImage a.img-thumb-container:focus> div > img {
+    border: thin solid rgb(192,192,192);
+    opacity: 1.0;
+}
+
+div.galeria-link-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 0 !important;
+    background-color: transparent;
+}
+
+div.galeria-link-text > div {
+    text-align: center;
+    border-radius: 5px;
+    font-size: 1.15em;
+    background-color: white;
+    background-color: rgba(255,255,255,0.85);
+    padding: 7px;
+}
+
+/* GalÃ©ria vÃ©ge */
+
+h1.animate-zoom {animation: animatezoom 1.75s;}
+@keyframes animatezoom {
+    from {opacity: 0;transform: scale(0);}
+    to {opacity: 1;transform: scale(1);}
+}
+
+.animate-zoom {animation: animatezoom2 0.5s;}
+@keyframes animatezoom2 {
+    from {transform: scale(0);}
+    to {transform: scale(1);}
+}
+
+button.animate-bottom {
+    position: relative;
+    animation: animatebottom 1.5s;
+}
+
+@keyframes animatebottom {
+    from {bottom: -300px;} 
+    to {bottom: 15px;}
+}
+
+div.animate-bottom {
+    position: relative;
+    animation: animatebottom2 2.50s;
+}
+
+@keyframes animatebottom2 {
+    from {bottom: -100px;} 
+    to {bottom: 0;}
+}
+
+div.animate-top {
+    position: relative;
+    animation: animatetop 2.50s;
+}
+
+@keyframes animatetop {
+    from {top: -100px;} 
+    to {top: 0;}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

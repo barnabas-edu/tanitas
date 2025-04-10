@@ -1,0 +1,194 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#navContainer {
+    background-color: #3f51b5;
+    background-color: rgba(63, 81, 181, 0.95);
+    background-image: linear-gradient(rgb(63, 81, 181), rgb(35, 50, 120));
+    opacity: 0.95;
+    color: white;
+    width: 100%;
+    z-index: 20;
+}
+
+#ulMainNav {
+    max-width: 1700px;
+}
+
+#ulMainNav.spage {
+    max-width: 1200px;
+}
+
+#ulMainNav li.has-submenu,
+#ulMainNav li.no-submenu,
+#ulMainNav li ul {
+    display: none;
+}
+
+#ulMainNav li {
+    list-style-type: none;
+    border-top: thin solid silver !important;
+}
+
+#ulMainNav li.logo {
+    display: block;
+    border: none;
+}
+
+#ulMainNav ul li {
+    background-color: #127;
+    background-color: rgba(17, 34, 119, 0.9);
+}
+
+#mainNav a:link,
+#mainNav a:visited,
+#mainNav a:hover,
+#mainNav a:active {
+    display: inline-block;
+    font-size: 18px;
+    height: 60px;
+    padding: 15px 10px;
+}
+
+#ulMainNav li ul li a {
+    padding-left: 50px !important;
+    width: 100%;
+}
+
+#ulMainNav li.admin-enter span,
+#ulMainNav li.search span {
+    margin-right: 10px;
+}
+
+#ulMainNav li.admin-enter a,
+#ulMainNav li.search a {
+    width: 100%;
+}
+
+#mainNav button {
+    width: 60px;
+    height: 60px;
+    background-color: transparent !important;
+    color: white;
+    font-size: 20px;
+    float: right;
+}
+
+#mainNav img {
+    width: 50px;
+    height: 50px;
+    margin-top: -10px;
+}
+
+
+@media screen and (min-width: 768px) {
+
+    .mobil-only,
+    #btnMobilMenu { display: none; }
+    
+    #navContainer {
+        width: 100%;
+        height: 70px;
+        position: fixed;
+    }
+    
+    #ulMainNav li {
+        border-top: none !important;
+    }
+    
+    #ulMainNav  ul li  {
+        border-top: thin solid silver !important;
+    }
+    
+    #mainNav img {
+        width: 60px;
+        height: 60px;
+        margin-top: -17px;
+    }
+    
+    #mainNav {margin: 0 auto;}
+    
+    #mainNav a {height: 70px !important;}
+    
+    #mainNav button {
+        width: 30px;
+        height: 70px !important;
+        border: none;
+        font-size: 18px;
+        float: none;
+        margin: 0 1px !important;
+        background-color: transparent !important;
+    }
+    
+    #ulMainNav {
+        display: block;
+        height: 70px;
+        position: relative;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    #ulMainNav > li {
+        display: inline-block !important;
+        float: left;
+        border: none;
+        height: 70px;
+        overflow: hidden;
+    }
+    
+    #ulMainNav > li.admin-enter,
+    #ulMainNav > li.search {
+        width: 50px;
+        text-align: center;
+        font-size: 20px;
+    }
+    
+    #ulMainNav li.admin-enter span,
+    #ulMainNav li.search span {
+        margin-right: 0;
+    }
+
+    #ulMainNav > li.admin-enter {float: right;}
+    
+    #ulMainNav > li > a {
+        position: relative;
+        top: 0 !important;
+        padding: 22px 10px 10px 10px !important;
+    }
+    
+    #ulMainNav > li:hover,
+    #ulMainNav > li > a:focus,
+    #ulMainNav li button:focus {
+        background-color: #127;
+        background-color: rgba(17, 34, 119, 0.9) !important;
+    }
+    
+    #ulMainNav > li > ul > li:hover,
+    #ulMainNav > li > ul > li > a:focus {
+        background-color: #004;
+        background-color: rgba(0, 0, 68, 0.9);
+    }
+    
+    #ulMainNav > li.no-submenu {text-align: center;}
+       
+    #ulMainNav li ul li {border-top: 1px solid silver;}
+    
+    #ulMainNav li ul li a {
+        padding-left: 10px !important;
+        display: flex !important;
+        align-items: center !important;
+    }
+
+    #ulMainNav > li.has-submenu > ul {
+        display: none;
+        position: absolute;
+        top: 70px;
+        width: 170px;
+    }
+
+    #ulMainNav > li.has-submenu.open > ul {display: block;}
+
+}
+
