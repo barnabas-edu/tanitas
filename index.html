@@ -7,33 +7,14 @@
         <meta name="description" content="Horváth Barnabás tanítási honlapja">
         <meta name="keywords" content="HorváthBarnabás, Horváth, Barnabás, Horvath, Barnabas, Horvath Barnabas, HB, tanítás, tanitas, teaching, teach, Dunaújváros, szig, SzIG, SZIG, Széchenyi István Gimnázium, Dunaújvárosi Széchenyi István Gimnázium">
         <link rel="shortcut icon" href="favicon.ico">
-        <meta http-equiv="Content-Style-Type" content="text/css">
-        <meta http-equiv="Content-Script-Type" content="text/javascript">
-                    <link rel="stylesheet" href="css/w3.css">
-            <link rel="stylesheet" href="css/glyph.css">
-            <link rel="stylesheet" href="css/general.css">
-            <link rel="stylesheet" href="css/menu.css">
-            <link rel="stylesheet" href="css/mainpage.css">
-            <script type="text/javascript" src="js/mainpage.js"></script>
         <title>Horváth Barnabás oldala</title>
+        <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-<center>
-    <header>
-        <nav>
-            <ul>
-            <li class="nav__links"><a href="https://barnabas-edu.github.io/tanitas/">Kezdőlap</a></li>
-            </ul>
-        </nav>
-        
-    </header></center>
-<script type="text/JavaScript">
-        window.addEventListener("scroll" ,function() {
-    let header = document.querySelector("header");
-    header.classList.toggle("sticky", window.scrollY > 0);
-});
-    </script>
+    <script src="./headerFooterManager.js"></script>
+	<my-header></my-header>
 <h1>Kezdőlap</h1>
 <center><h1>Fejlesztés alatt</h1></center>
+    <my-footer></my-footer>
 </body>
 </html>
