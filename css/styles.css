@@ -27,14 +27,15 @@ header {
     padding: 1%;
 }
 footer {
+	width:100%;
 	border-radius: 20px 20px 0px 0px;
-    position: center;
-    top:0;
-    background-color: #1658ae;
+	bottom: 0;
+	position: fixed;
+	right: 0;
+    	background-color: #1658ae;
 	color: #ffffff
-    width: 100%;
-    text-align: center;
-    padding: 1%;
+   	 text-align: center;
+   	 padding: 1%;
 }
 ul{
     list-style: none;
