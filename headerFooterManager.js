@@ -18,9 +18,11 @@ customElements.define('my-header', MyHeader)
 class MyFooter extends HTMLElement {
 	connectedCallback() {
 		this.innerHTML = `
-		<p style="display:flex; justify-connect:space-around; background-color:#eeeeee; padding:10px;">
+		<footer>
+		<p style="display:flex; justify-connect:space-around; color:#ffffff; padding:10px;">
 		...
 		</p>
+		</footer>
 		`
 	}
 }
