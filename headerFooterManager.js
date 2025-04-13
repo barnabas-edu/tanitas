@@ -5,8 +5,8 @@ class MyHeader extends HTMLElement {
 		<header>
         <nav>
             <ul>
-            <li class="nav__links"><a href="index.html">Kezdőlap</a></li>
-            <li class="nav__links"><a href="altkem.html">Általános kémia</a></li>
+            <li class="nav__links"><a href="https://barnabas-edu.github.io/tanitas/">Kezdőlap</a></li>
+            <li class="nav__links"><a href="altkem">Általános kémia</a></li>
             </ul>
         </nav></header></center>
 		`
