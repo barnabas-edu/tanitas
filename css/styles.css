@@ -9,16 +9,11 @@
 body {
   background-color: white;
 }
-h1 {
-    color: #edf0f1;
-    font-size: 400%;
-
-}
 li,a,button {
 
     font-weight: 500;
     font-size: 100%;
-    color: #edf0f1;
+    color: #ffffff;
     text-decoration: none;
 }
 header {
@@ -29,6 +24,16 @@ header {
     transition: 2s;
     width: 100%;
     align-items: center;
+    padding: 1%;
+}
+footer {
+	border-radius: 20px 20px 0px 0px;
+    position: center;
+    top:0;
+    background-color: #1658ae;
+	color: #ffffff
+    width: 100%;
+    text-align: center;
     padding: 1%;
 }
 ul{
@@ -47,7 +52,7 @@ ul li a {
 }
 
 li a:hover {
-    color: #999999;
+    color: #94a6ff;
     transition: 0.5s;
 }
 
