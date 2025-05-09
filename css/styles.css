@@ -65,6 +65,13 @@ main {
   margin-bottom: 0px;
 }
 
+.wrapper {
+      background-color: white;
+      min-height: 100vh; /* Kitölti a teljes nézetmagasságot */
+      box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Árnyék, hogy elváljon a háttértől */
+      padding: 20px;
+}
+
 ul {
   list-style: none;
 }
