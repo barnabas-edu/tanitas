@@ -20,6 +20,8 @@
   --text-color: #ff1818;
   --container-color: #5488cc;
   --m-color: #1658ae;
+  --m-color-dark: #0d366a;
+  --dark-text: #e3e3e3;
 
   /*========== Font and typography ==========*/
   --body-font: 'Quicksand', sans-serif;
@@ -39,6 +41,117 @@
   }
 }
 
+/*=============== Dark & Light MODE ===============*/
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: var(--m-color-dark);
+    color: white;
+  }
+  .wrapper {
+      background-color: black;
+  }
+  main {
+    background-color: black;
+  }
+  .header {
+  background-color: var(--m-color-dark);
+}
+  .nav__menu {
+	background-color: var(--m-color-dark);
+  }
+  .nav__logo {
+  color: var(--dark-text);
+  }
+  .nav__link {
+  color: var(--dark-text);
+  }
+  h1 {
+	color: var(--m-color-dark);
+  }
+  h2 {
+	color: var(--dark-text);
+  }
+  h2 a {
+	color: var(--m-color-dark);
+  }
+  h3 {
+	color: var(--dark-text);
+  }
+  h3 a{
+	color: var(--m-color-dark);
+  }
+  h4 {
+	color: var(--dark-text);
+  }
+  h6 {
+	color: var(--dark-text);
+  }
+  h6 a {
+	color: var(--m-color-dark);
+  }
+  p {
+  color: var(--dark-text);
+  }
+  p a {
+  color: var(--m-color-dark);
+  }
+}
+/* Style rules for light mode */
+@media (prefers-color-scheme: light) {
+  body {
+    background-color: var(--m-color);
+    color: black;
+  }
+  .wrapper {
+      background-color: white;
+  }
+  main {
+    background-color: white;
+  }
+  .header {
+  background-color: var(--m-color);
+}
+  .nav__menu {
+	background-color: var(--m-color);
+  }
+  .nav__logo {
+  color: #ffffff;
+  }
+  .nav__link {
+  color: #ffffff;
+  }
+  h1 {
+	color: var(--m-color);
+  }
+  h2 {
+	color: black;
+  }
+  h2 a {
+	color: var(--m-color);
+  }
+  h3 {
+	color: black;
+  }
+  h3 a{
+	color: var(--m-color);
+  }
+  h4 {
+	color: black;
+  }
+  h6 {
+	color: black;
+  }
+  h6 a {
+	color: var(--m-color);
+  }
+  p {
+  color: black;
+  }
+  p a {
+  color: var(--m-color);
+  }
+}
+
 /*=============== BASE ===============*/
 * {
     box-sizing: border-box;
@@ -52,14 +165,13 @@ html {
 }
 
 body {
-  background-color: var(--m-color);
   height:100%; 
   position: relative;
   margin-top: 0px;
   margin-bottom: 0px;
 }
+
 main {
-  background-color: white;
   height:100%; 
   position: relative;
   margin-top: 100px;
@@ -67,7 +179,6 @@ main {
 }
 
 .wrapper {
-      background-color: white;
       min-height: 100vh; /* Kitölti a teljes nézetmagasságot */
       box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Árnyék, hogy elváljon a háttértől */
       padding: 20px;
@@ -114,7 +225,6 @@ img {
 h1 {
 	font-family: 'Quicksand', sans-serif;
 	font-weight: 700;
-	color: var(--m-color);
     font-size: 250%;
 	text-align: center;
   margin-top: 5%;
@@ -126,7 +236,6 @@ h2 {
 	font-family: 'Quicksand', sans-serif;
 	font-weight: 700;
 	font-size: 200%;
-	color: black;
 	text-align: center;
   margin-top: 2%;
   margin-right: 5%;
@@ -134,33 +243,27 @@ h2 {
   margin-bottom: 2%;
 }
 h2 a {
-	color: var(--m-color);
 	margin-right: 5%;
 	margin-left: 5%;
 }
 h3 {
-	color: black;
 	margin-right: 5%;
 	margin-left: 5%;
 }
 h3 a{
-	color: var(--m-color);
 	margin-right: 5%;
 	margin-left: 7%;
 }
 h4 {
-	color: black;
 	margin-right: 5%;
 	margin-left: 9%;
 }
 h6 {
 	font-size: 80%;
 	text-align: center;
-	color: black;
 }
 h6 a {
 	text-align: center;
-	color: var(--m-color);
 	font-size: 100%;
 }
 h6 a:hover {
@@ -169,14 +272,12 @@ h6 a:hover {
 }
 p {
   font-size: 120%;
-  color: black;
   margin-right: 5%;
   margin-left: 10%;
   margin-top: 0%;
   margin-bottom: 0%;
 }
 p a {
-  color: var(--m-color);
   margin-top: 2%;
   margin-bottom: 2%;
 }
@@ -219,7 +320,6 @@ table, th, td {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: var(--m-color);
   z-index: var(--z-fixed);
   transition: .4s;
 }
@@ -238,7 +338,7 @@ table, th, td {
 }
 
 .nav__logo {
-  color: #ffffff;
+	font-size: 120%;
   font-weight: 600;
 }
 
@@ -247,7 +347,6 @@ table, th, td {
     position: fixed;
     bottom: 0;
     left: 0;
-	background-color: var(--m-color);
     box-shadow: 0 -1px 12px hsla(var(--hue), var(--sat), 15%, 0.15);
     width: 100%;
     height: 4rem;
@@ -268,7 +367,6 @@ table, th, td {
   flex-direction: column;
   align-items: center;
   row-gap: 4px;
-  color: #ffffff;
   font-weight: 600;
 }
 
@@ -288,8 +386,8 @@ table, th, td {
 /*Active link*/
 .active-link {
   position: relative;
-  color: var(--first-color);
   color: #b6d0f0;
+  color: var(--first-color);
   transition: .3s;
 }
 
