@@ -5,8 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Általános kémia</title>
 	<link rel="stylesheet" href="css/styles.css">
+		<meta name="theme-color" content="">
+	<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const themeColor = getComputedStyle(document.documentElement)
+    .getPropertyValue('--m-color')
+    .trim();
 
-	<script src="theme.js" defer></script>
+  let metaTag = document.querySelector('meta[name="theme-color"]');
+  if (!metaTag) {
+    metaTag = document.createElement('meta');
+    metaTag.name = "theme-color";
+    document.head.appendChild(metaTag);
+  }
+
+  metaTag.setAttribute("content", themeColor);
+});
+</script>
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta content="var(--m-color)" name="msapplication-TileColor">
