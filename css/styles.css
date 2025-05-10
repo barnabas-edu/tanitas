@@ -12,13 +12,14 @@
   --header-height: 3rem;
 
   /*========== Colors ==========*/
-  --hue: 174;
-  --sat: 63%;
-  --first-color: hsl(var(--hue), var(--sat), 40%);
-  --first-color-alt: hsl(var(--hue), var(--sat), 36%);
-  --title-color: hsl(var(--hue), 12%, 15%);
-  --text-color: hsl(var(--hue), 8%, 35%);
-  --container-color: #FFF;
+  --hue: 180;
+  --sat: 100%;
+  --first-color: #a6ccff;
+  --first-color-alt: #ff1818;
+  --title-color: #ff1818;
+  --text-color: #ff1818;
+  --container-color: #5488cc;
+  --m-color: #1658ae;
 
   /*========== Font and typography ==========*/
   --body-font: 'Quicksand', sans-serif;
@@ -51,7 +52,7 @@ html {
 }
 
 body {
-  background-color: white;
+  background-color: var(--m-color);
   height:100%; 
   position: relative;
   margin-top: 0px;
@@ -62,7 +63,7 @@ main {
   height:100%; 
   position: relative;
   margin-top: 100px;
-  margin-bottom: 0px;
+  margin-bottom: 80px;
 }
 
 .wrapper {
@@ -113,7 +114,7 @@ img {
 h1 {
 	font-family: 'Quicksand', sans-serif;
 	font-weight: 700;
-	color: #1658ae;
+	color: var(--m-color);
     font-size: 250%;
 	text-align: center;
   margin-top: 5%;
@@ -133,7 +134,7 @@ h2 {
   margin-bottom: 2%;
 }
 h2 a {
-	color: #1658ae;
+	color: var(--m-color);
 	margin-right: 5%;
 	margin-left: 5%;
 }
@@ -143,7 +144,7 @@ h3 {
 	margin-left: 5%;
 }
 h3 a{
-	color: #1658ae;
+	color: var(--m-color);
 	margin-right: 5%;
 	margin-left: 7%;
 }
@@ -159,7 +160,7 @@ h6 {
 }
 h6 a {
 	text-align: center;
-	color: #1658ae;
+	color: var(--m-color);
 	font-size: 100%;
 }
 h6 a:hover {
@@ -175,7 +176,7 @@ p {
   margin-bottom: 0%;
 }
 p a {
-  color: #1658ae;
+  color: var(--m-color);
   margin-top: 2%;
   margin-bottom: 2%;
 }
@@ -218,7 +219,7 @@ table, th, td {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #1658ae;
+  background-color: var(--m-color);
   z-index: var(--z-fixed);
   transition: .4s;
 }
@@ -246,7 +247,7 @@ table, th, td {
     position: fixed;
     bottom: 0;
     left: 0;
-	background-color: #1658ae;
+	background-color: var(--m-color);
     box-shadow: 0 -1px 12px hsla(var(--hue), var(--sat), 15%, 0.15);
     width: 100%;
     height: 4rem;
