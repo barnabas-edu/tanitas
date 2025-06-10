@@ -3,7 +3,7 @@ class MyHeader extends HTMLElement {
 		this.innerHTML = `
 		<header class="header" id="header">
             <nav class="nav container">
-                <a href="/tanitas/index.html" class="nav__logo">Horváth Barnabás Oldala</a>
+                <a href="/tanitas/index" class="nav__logo">Horváth Barnabás Oldala</a>
 
                 <div class="nav__menu" id="nav-menu">
                     <ul class="nav__list">
