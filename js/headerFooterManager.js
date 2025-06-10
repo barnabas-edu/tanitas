@@ -3,12 +3,12 @@ class MyHeader extends HTMLElement {
 		this.innerHTML = `
 		<header class="header" id="header">
             <nav class="nav container">
-                <a href="/tanitas/index" class="nav__logo">Horváth Barnabás Oldala</a>
+                <a href="/tanitas/" class="nav__logo">Horváth Barnabás Oldala</a>
 
                 <div class="nav__menu" id="nav-menu">
                     <ul class="nav__list">
                         <li class="nav__item">
-                            <a href="/tanitas/index.html" class="nav__link">
+                            <a href="/tanitas/" class="nav__link">
                                 <i class='bx bx-home-alt nav__icon'></i>
                                 <span class="nav__name">Kezdőlap</span>
                             </a>
