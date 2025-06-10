@@ -3,28 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Szerves kémia</title>
-	<link rel="stylesheet" href="styles.css">
+	<title>Általános kémia</title>
+	<link rel="stylesheet" href="/tanitas/css/styles.css">
+		<meta name="theme-color" content="">
+	<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const themeColor = getComputedStyle(document.documentElement)
+    .getPropertyValue('--m-color')
+    .trim();
+
+  let metaTag = document.querySelector('meta[name="theme-color"]');
+  if (!metaTag) {
+    metaTag = document.createElement('meta');
+    metaTag.name = "theme-color";
+    document.head.appendChild(metaTag);
+  }
+
+  metaTag.setAttribute("content", themeColor);
+});
+</script>
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta content="var(--m-color)" name="msapplication-TileColor">
+	
 </head>
 <body>
-<center>
-    <header>
-        <nav>
-            <ul>
-            <li class="nav__links"><a href="index.html">Kezdőlap</a></li>
-            <li class="nav__links"><a href="altkem.html">Általános kémia</a></li>            
-            <li class="nav__links"><a href="szervetlen.html">Szervetlen kémia</a></li>
-			<li class="nav__links"><a href="szerves.html">Szerves kémia</a></li>
-            </ul>
-        </nav>
-        
-    </header></center>
-<script type="text/JavaScript">
-        window.addEventListener("scroll" ,function() {
-    let header = document.querySelector("header");
-    header.classList.toggle("sticky", window.scrollY > 0);
-});
-    </script>
+<div class="wrapper">
+	<main>
+	<script src="/tanitas/js/headerFooterManager.js"></script>
+	<my-header></my-header>
 <h1>Szerves kémia</h1>
 <h2>Szerves kémiából érintett témakörök:</h2>
 <p>
@@ -48,5 +55,8 @@
 - A fehérjék és nukleinsavak<br />
 - A műanyagok
 </p>
+<my-footer></my-footer>
+	</main>
+</div>
 </body>
 </html>
