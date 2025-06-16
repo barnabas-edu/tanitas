@@ -15,21 +15,21 @@ class MyHeader extends HTMLElement {
                         </li>
 
                         <li class="nav__item">
-                            <a href="/tanitas/tananyagok" class="nav__link">
+                            <a href="/tanitas/tananyagok/" class="nav__link">
                                 <i class='bx bx-book nav__icon'></i>
                                 <span class="nav__name">Tananyagok</span>
                             </a>
                         </li>
 
                         <li class="nav__item">
-                            <a href="/tanitas/segedletek" class="nav__link">
+                            <a href="/tanitas/segedletek/" class="nav__link">
                                 <i class='bx bx-file-blank nav__icon'></i>
                                 <span class="nav__name">Segédletek</span>
                             </a>
                         </li>
 						
 						<li class="nav__item">
-                            <a href="/tanitas/rolam" class="nav__link">
+                            <a href="/tanitas/rolam/" class="nav__link">
                                 <i class='bx bx-user nav__icon'></i>
                                 <span class="nav__name">Rólam</span>
                             </a>
