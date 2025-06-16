@@ -22,9 +22,9 @@ class MyHeader extends HTMLElement {
                         </li>
 
                         <li class="nav__item">
-                            <a href="/tanitas/szamologep" class="nav__link">
-                                <i class='bx bx-calculator nav__icon'></i>
-                                <span class="nav__name">Számológép</span>
+                            <a href="/tanitas/segedletek" class="nav__link">
+                                <i class='bx bx-file-blank nav__icon'></i>
+                                <span class="nav__name">Segédletek</span>
                             </a>
                         </li>
 						
