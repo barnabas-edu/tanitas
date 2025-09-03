@@ -1,13 +1,30 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const themeColor = "#1658ae"; // Itt állítod be a központi színt
+const body = document.body;
+    const toggleBtn = document.getElementById("theme-toggle");
+    const icon = toggleBtn.querySelector("i");
 
-  let metaTag = document.querySelector('meta[name="theme-color"]');
-  if (metaTag) {
-    metaTag.setAttribute("content", themeColor);
-  } else {
-    metaTag = document.createElement("meta");
-    metaTag.name = "theme-color";
-    metaTag.content = themeColor;
-    document.head.appendChild(metaTag);
-  }
-});
+    // Böngésző szerinti alap
+    if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+      body.classList.add("dark");
+    } else {
+      body.classList.add("light");
+    }
+
+    // Ikon frissítése
+    function updateButtonIcon() {
+      if (body.classList.contains("dark")) {
+        icon.className = "bx bx-sun";   // nap ikon
+      } else {
+        icon.className = "bx bx-moon";  // hold ikon
+      }
+    }
+    updateButtonIcon();
+
+    // Váltás kattintásra
+    toggleBtn.addEventListener("click", () => {
+      if (body.classList.contains("dark")) {
+        body.classList.replace("dark", "light");
+      } else {
+        body.classList.replace("light", "dark");
+      }
+      updateButtonIcon();
+    });
