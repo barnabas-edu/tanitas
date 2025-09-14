@@ -1,6 +1,105 @@
 /*=============== GOOGLE FONTS ===============*/
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
 
+:root {
+      --bg: #ffffff;
+      --text: #000000;
+    }
+
+@media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #111111;
+        --text: #ffffff;
+      }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+      background: var(--bg);
+      color: var(--text);
+      padding: 2rem;
+	  height:100%; 
+      position: relative;
+      margin-top: 0px;
+      margin-bottom: 0px;
+      transition: background 0.3s, color 0.3s;
+}
+	
+	.wrapper {
+    background-color: var(--bg);
+	transition: background 0.3s;
+	min-height: 100vh; /* Kitölti a teljes nézetmagasságot */
+    padding: 20px;
+	}
+	  
+  main {
+    background-color: var(--bg);
+	height:100%; 
+    position: relative;
+    margin-top: 100px;
+    margin-bottom: 80px;
+	transition: background 0.3s, color 0.3s;
+	}
+  .header {
+    background-color: var(--m-color);
+	transition: background 0.3s, color 0.3s;
+    }
+  .nav__menu {
+	  background-color: var(--m-color);
+	  transition: background 0.3s, color 0.3s;
+	}
+  .nav__logo {
+		color: var(--navtext);
+		transition: background 0.3s, color 0.3s;
+		}
+  .nav__link {
+	color: var(--navtext);
+	transition: background 0.3s, color 0.3s;
+	}
+
+    body.light {
+	  --m-color: #1658ae;
+      --bg: #ffffff;
+      --text: #000000;
+	  --navtext: #ffffff;
+	  --first-color: #a6ccff;
+    }
+
+    body.dark {
+      --m-color: #0d366a;
+	  --bg: #111111;
+      --text: #ffffff;
+	  --navtext: #ffffff;
+	  --first-color: #a6ccff;
+    }
+
+    #theme-toggle {
+     color: var(--navtext);
+      transition: background 0.3s;
+	  width: 2.5rem;
+	  height: 2.5rem;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 1.5rem;       /* ikon mérete */
+    background: var(--first-color);      /* háttérszín */
+    color: #fff;           /* ikon színe */
+    transition: background 0.3s, color 0.3s, transform 0.2s;
+    }
+
+    #theme-toggle:hover {
+      background: #666;
+    }
+
+
 .quicksand-<uniquifier> {
   font-family: "Quicksand", sans-serif;
   font-optical-sizing: auto;
@@ -12,15 +111,9 @@
   --header-height: 3rem;
 
   /*========== Colors ==========*/
-  --hue: 180;
-  --sat: 100%;
-  --first-color: #a6ccff;
-  --first-color-alt: #ff1818;
   --title-color: #ff1818;
   --text-color: #ff1818;
   --container-color: #5488cc;
-  --m-color: #1658ae;
-  --m-color-dark: #0d366a;
   --dark-text: #e3e3e3;
 
   /*========== Font and typography ==========*/
@@ -42,115 +135,36 @@
 }
 
 /*=============== Dark & Light MODE ===============*/
-@media (prefers-color-scheme: dark) {
-  body {
-    background-color: var(--m-color-dark);
-    color: white;
-  }
-  .wrapper {
-      background-color: black;
-  }
-  main {
-    background-color: black;
-  }
-  .header {
-  background-color: var(--m-color-dark);
-}
-  .nav__menu {
-	background-color: var(--m-color-dark);
-  }
-  .nav__logo {
-  color: var(--dark-text);
-  }
-  .nav__link {
-  color: var(--dark-text);
-  }
-  h1 {
-	color: var(--m-color-dark);
-  }
-  h2 {
-	color: var(--dark-text);
-  }
-  h2 a {
-	color: var(--m-color-dark);
-  }
-  h3 {
-	color: var(--dark-text);
-  }
-  h3 a{
-	color: var(--m-color-dark);
-  }
-  h4 {
-	color: var(--dark-text);
-  }
-  h6 {
-	color: var(--dark-text);
-  }
-  h6 a {
-	color: var(--m-color-dark);
-  }
-  p {
-  color: var(--dark-text);
-  }
-  p a {
-  color: var(--m-color-dark);
-  }
-}
-/* Style rules for light mode */
-@media (prefers-color-scheme: light) {
-  body {
-    background-color: var(--m-color);
-    color: black;
-  }
-  .wrapper {
-      background-color: white;
-  }
-  main {
-    background-color: white;
-  }
-  .header {
-  background-color: var(--m-color);
-}
-  .nav__menu {
-	background-color: var(--m-color);
-  }
-  .nav__logo {
-  color: #ffffff;
-  }
-  .nav__link {
-  color: #ffffff;
-  }
   h1 {
 	color: var(--m-color);
   }
   h2 {
-	color: black;
+	color: var(--text);
   }
   h2 a {
 	color: var(--m-color);
   }
   h3 {
-	color: black;
+	color: var(--text);
   }
   h3 a{
 	color: var(--m-color);
   }
   h4 {
-	color: black;
+	color: var(--text);
   }
   h6 {
-	color: black;
+	color: var(--text);
   }
   h6 a {
 	color: var(--m-color);
   }
   p {
-  color: black;
+  color: var(--text);
   }
   p a {
   color: var(--m-color);
   }
-}
 
 /*=============== BASE ===============*/
 * {
@@ -158,30 +172,6 @@
     margin: 0;
     padding: 0;
     font-family: 'Quicksand', sans-serif;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  height:100%; 
-  position: relative;
-  margin-top: 0px;
-  margin-bottom: 0px;
-}
-
-main {
-  height:100%; 
-  position: relative;
-  margin-top: 100px;
-  margin-bottom: 80px;
-}
-
-.wrapper {
-      min-height: 100vh; /* Kitölti a teljes nézetmagasságot */
-      box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Árnyék, hogy elváljon a háttértől */
-      padding: 20px;
 }
 
 ul {
@@ -339,7 +329,7 @@ table, th, td {
 
 .nav__logo {
 	font-size: 120%;
-  font-weight: 600;
+   font-weight: 600;
 }
 
 @media screen and (max-width: 767px) {
@@ -444,6 +434,9 @@ table, th, td {
     font-size: var(--normal-font-size);
     /* display: block; */ /* Minimalist design, visible labels */
   }
+  .nav__list {
+    column-gap: 2rem;
+  }
   .nav__link:hover {
     color: var(--first-color);
   }
@@ -456,7 +449,7 @@ table, th, td {
     width: 4px;
     height: 4px;
     background-color: var(--first-color);
-	background-color: #8fb1db;
+	background-color: red;
     border-radius: 50%;
   }
 
