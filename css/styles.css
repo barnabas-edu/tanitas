@@ -115,6 +115,7 @@ body {
   --text-color: #ff1818;
   --container-color: #5488cc;
   --dark-text: #e3e3e3;
+  --header-color: var(--m-color);
 
   /*========== Font and typography ==========*/
   --body-font: 'Quicksand', sans-serif;
@@ -466,3 +467,4 @@ table, th, td {
     margin-right: auto;
   }
 }
+
