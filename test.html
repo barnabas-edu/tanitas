@@ -1,14 +1,44 @@
 <!DOCTYPE html>
 <html lang="hu">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Általános kémia</title>
-	<link rel="stylesheet" href="css/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0", user-scalable=no, viewport-fit="cover" name="viewport">
+        <meta charset="utf-8">
+        <meta name="author" content="Horváth Barnabás">
+        <meta name="description" content="Horváth Barnabás tanítási honlapja">
+        <meta name="keywords" content="HorváthBarnabás, Horváth, Barnabás, Horvath, Barnabas, Horvath Barnabas, HB, tanítás, tanitas, teaching, teach, Dunaújváros, szig, SzIG, SZIG, Széchenyi István Gimnázium, Dunaújvárosi Széchenyi István Gimnázium">
+	<link rel="shortcut icon" href="favicon.ico">
+        <title>Horváth Barnabás Oldala</title>
+  <link rel="stylesheet" href="/tanitas/css/styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+		<meta name="theme-color" content="">
+	<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const themeColor = getComputedStyle(document.documentElement)
+    .getPropertyValue('--m-color')
+    .trim();
+
+  let metaTag = document.querySelector('meta[name="theme-color"]');
+  if (!metaTag) {
+    metaTag = document.createElement('meta');
+    metaTag.name = "theme-color";
+    document.head.appendChild(metaTag);
+  }
+
+  metaTag.setAttribute("content", themeColor);
+});
+</script>
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta content="var(--m-color)" name="msapplication-TileColor">
+	<meta name="theme-color" content="var(--m-color)" />
 </head>
 <body>
-	<script src="./headerFooterManager.js"></script>
+	<div class="wrapper">
+<script src="/tanitas/js/headerFooterManager.js"></script>
 	<my-header></my-header>
+	<script src="/tanitas/js/theme.js"></script>
+	<my-header></my-header>
+		<main>
 <h1>Általános kémia</h1>
 <h2>Általános kémiából érintett témakörök:</h2>
 <p>
@@ -26,5 +56,7 @@
 - Redoxireakciók<br />
 - Elektrokémia
 </p>
+		</main>
+	</div>
 </body>
 </html>
