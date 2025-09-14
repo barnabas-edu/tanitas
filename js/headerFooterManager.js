@@ -3,12 +3,12 @@ class MyHeader extends HTMLElement {
 		this.innerHTML = `
 		<header class="header" id="header">
             <nav class="nav container">
-                <a href="/" class="nav__logo">Horváth Barnabás Oldala</a>
+                <a href="https://barnabas-edu.github.io/tanitas/" class="nav__logo">Horváth Barnabás Oldala</a>
                 <div class="nav__menu" id="nav-menu">
                     <ul class="nav__list">
 												
                         <li class="nav__item">
-                            <a href="/" class="nav__link">
+                            <a href="https://barnabas-edu.github.io/tanitas/" class="nav__link">
                                 <i class='bx bx-home-alt nav__icon'></i>
                                 <span class="nav__name">Kezdőlap</span>
                             </a>
@@ -62,5 +62,6 @@ class MyFooter extends HTMLElement {
 }
 
 customElements.define('my-footer', MyFooter)
+
 
 
