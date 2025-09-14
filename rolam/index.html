@@ -11,7 +11,7 @@
 	<script>
 document.addEventListener("DOMContentLoaded", function () {
   const themeColor = getComputedStyle(document.documentElement)
-    .getPropertyValue('--m-color')
+    .getPropertyValue('--header-color')
     .trim();
 
   let metaTag = document.querySelector('meta[name="theme-color"]');
@@ -30,8 +30,9 @@ document.addEventListener("DOMContentLoaded", function () {
 	</head>
 <body>
 	<div class="wrapper">
-<script src="/tanitas/js/headerFooterManager.js"></script>
+<script src="js/headerFooterManager.js"></script>
 	<my-header></my-header>
+	<script src="js/theme.js"></script>
 <main>
 <h1>Rólam</h1>
 <h2>Hamarosan...</h2>
@@ -42,4 +43,5 @@ Ki vagyok én?
 	</div>
 </body>
 </html>
+
 
