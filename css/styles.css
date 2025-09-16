@@ -18,7 +18,7 @@ html {
 }
 
 body {
-      background: var(--bg);
+      background: var(--header-color);
       color: var(--text);
       padding: 2rem;
 	  height:100%; 
@@ -467,5 +467,6 @@ table, th, td {
     margin-right: auto;
   }
 }
+
 
 
