@@ -47,7 +47,6 @@ body {
 	transition: background 0.3s, color 0.3s;
     }
   .nav__menu {
-	  background-color: var(--m-color);
 	  transition: background 0.3s, color 0.3s;
 	}
   .nav__logo {
@@ -334,6 +333,7 @@ table, th, td {
 
 @media screen and (max-width: 767px) {
   .nav__menu {
+	background-color: var(--m-color);
     position: fixed;
     bottom: 0;
     left: 0;
@@ -404,6 +404,10 @@ table, th, td {
   .nav__name {
     display: none;
   }
+  .nav__menu {
+	  background-color: var(--m-color);
+	  transition: background 0.3s, color 0.3s;
+	}
 }
 
 /* For medium devices */
@@ -412,6 +416,10 @@ table, th, td {
     justify-content: center;
     column-gap: 3rem;
   }
+  .nav__menu {
+	  background-color: var(--m-color);
+	  transition: background 0.3s, color 0.3s;
+	}
 }
 
 @media screen and (min-width: 767px) {
@@ -466,7 +474,3 @@ table, th, td {
     margin-right: auto;
   }
 }
-
-
-
-
