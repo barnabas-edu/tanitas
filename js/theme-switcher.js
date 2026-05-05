@@ -106,7 +106,7 @@
 
             // Kiolvassuk a CSS változó értékét
 const stilus = getComputedStyle(document.documentElement);
-const szin = stilus.getPropertyValue('--elsodleges-szin').trim();
+const szin = stilus.getPropertyValue('--header-bg').trim();
 
 // Beállítjuk a fejléc színét
 document.querySelector('meta[name="theme-color"]').setAttribute("content", szin);
