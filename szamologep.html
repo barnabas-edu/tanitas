@@ -5,39 +5,24 @@
         <meta charset="utf-8">
         <meta name="author" content="Horváth Barnabás">
         <meta name="description" content="Horváth Barnabás tanítási honlapja">
-        <meta name="keywords" content="HorváthBarnabás, Horváth, Barnabás, Horvath, Barnabas, Horvath Barnabas, HB, tanítás, tanitas, teaching, teach, Dunaújváros, szig, SzIG, SZIG, Széchenyi István Gimnázium, Dunaújvárosi Széchenyi István Gimnázium">
+        <meta name="keywords" content="HorváthBarnabás, Horváth, Barnabás, Horvath, Barnabas, Horvath Barnabas, HB, tanítás, tanitas, teaching, teach">
         <meta content="#1658ae" name="msapplication-TileColor">
 	<meta content="#1658ae" name="theme-color">
 	<link rel="shortcut icon" href="favicon.ico">
         <title>Horváth Barnabás Oldala</title>
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/theme-switcher.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
 	<meta name="theme-color" content="">
-	<script>
-document.addEventListener("DOMContentLoaded", function () {
-  const themeColor = getComputedStyle(document.documentElement)
-    .getPropertyValue('--header-color')
-    .trim();
-
-  let metaTag = document.querySelector('meta[name="theme-color"]');
-  if (!metaTag) {
-    metaTag = document.createElement('meta');
-    metaTag.name = "theme-color";
-    document.head.appendChild(metaTag);
-  }
-
-  metaTag.setAttribute("content", themeColor);
-});
-</script>
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta content="var(--header-color)" name="msapplication-TileColor">
+    <meta content="var(--header-bg)" name="msapplication-TileColor">
 </head>
 <body>
 	<div class="wrapper">
 <script src="js/headerFooterManager.js"></script>
 	<my-header></my-header>
-	<script src="js/theme.js"></script>
 <main>
 <h1>Számológép</h1>
 <h2>Hamarosan...</h2>
@@ -46,11 +31,7 @@ Casio fx-991CE X leírások + videók
 </p>
 </main>
 	</div>
+	<!-- <script src="theme-switcher.js"></script> -->
+	<script src="js/theme-switcher.js"></script>
 </body>
 </html>
-
-
-
-
-
-
