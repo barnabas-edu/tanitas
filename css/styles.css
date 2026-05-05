@@ -17,9 +17,17 @@ html {
   scroll-behavior: smooth;
 }
 
+footer {
+            text-align: center;
+            padding: 2rem;
+            font-size: 0.85rem;
+            opacity: 0.8;
+            border-top: 1px solid var(--border-color);
+            margin-top: 3rem;
+}
 body {
-      background: var(--header-color);
-      color: var(--text);
+      background: var(--bg-color);
+      color: var(--text-color);
 	  height:100%; 
       position: relative;
       margin-top: 0px;
@@ -28,14 +36,14 @@ body {
 }
 	
 	.wrapper {
-    background-color: var(--bg);
+    background-color: var(--bg-color);
 	transition: background 0.3s;
 	min-height: 100vh; /* Kitölti a teljes nézetmagasságot */
     padding: 20px;
 	}
 	  
   main {
-    background-color: var(--bg);
+    background-color: var(--bg-color);
 	height:100%; 
     position: relative;
     margin-top: 100px;
@@ -43,60 +51,30 @@ body {
 	transition: background 0.3s, color 0.3s;
 	}
   .header {
-    background-color: var(--m-color);
+    background-color: var(--header-bg);
 	transition: background 0.3s, color 0.3s;
     }
+	
+	.navbar {
+    display: flex;
+    justify-content: space-between; /* Elemek elosztása: bal-közép-jobb */
+    align-items: center; /* Függőleges középrezárás */
+    background-color: var(--header-bg);
+    padding: 10px 20px;
+    color: white;
+}
+	
   .nav__menu {
 	  transition: background 0.3s, color 0.3s;
 	}
   .nav__logo {
-		color: var(--navtext);
+		color: var(--header-logo);
 		transition: background 0.3s, color 0.3s;
 		}
   .nav__link {
-	color: var(--navtext);
+	color: var(--header-text);
 	transition: background 0.3s, color 0.3s;
 	}
-
-    body.light {
-	  --m-color: #1658ae;
-      --bg: #ffffff;
-      --text: #000000;
-	  --navtext: #ffffff;
-	  --first-color: #a6ccff;
-    }
-
-    body.dark {
-      --m-color: #0d366a;
-	  --bg: #111111;
-      --text: #ffffff;
-	  --navtext: #ffffff;
-	  --first-color: #a6ccff;
-    }
-
-    #theme-toggle {
-     color: var(--navtext);
-      transition: background 0.3s;
-	  width: 2.5rem;
-	  height: 2.5rem;
-    border: none;
-    border-radius: 50%;
-    cursor: pointer;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    font-size: 1.5rem;       /* ikon mérete */
-    background: var(--first-color);      /* háttérszín */
-    color: #fff;           /* ikon színe */
-    transition: background 0.3s, color 0.3s, transform 0.2s;
-    }
-
-    #theme-toggle:hover {
-      background: #666;
-    }
-
 
 .quicksand-<uniquifier> {
   font-family: "Quicksand", sans-serif;
@@ -177,8 +155,9 @@ ul {
   list-style: none;
 }
 
-a {
-  text-decoration: none;
+a { 
+	color: var(--primary-color);
+	text-decoration: none;
 }
 
 iframe {
@@ -305,6 +284,8 @@ table, th, td {
 
 /*=============== HEADER ===============*/
 .header {
+    justify-content: space-between; /* Elemek elosztása: bal-közép-jobb */
+    align-items: center; /* Függőleges középrezárás */
   position: fixed;
   top: 0;
   left: 0;
@@ -317,8 +298,8 @@ table, th, td {
 .nav {
   height: var(--header-height);
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+    justify-content: space-between; /* Elemek elosztása: bal-közép-jobb */
+    align-items: center; /* Függőleges középrezárás */
 }
 
 .nav__img {
@@ -333,7 +314,7 @@ table, th, td {
 
 @media screen and (max-width: 767px) {
   .nav__menu {
-	background-color: var(--m-color);
+	background-color: var(--header-bg);
     position: fixed;
     bottom: 0;
     left: 0;
@@ -342,7 +323,7 @@ table, th, td {
     height: 4rem;
     padding: 0 1rem;
     display: grid;
-    align-content: center;
+    align-items: center;
     border-radius: 1.25rem 1.25rem 0 0;
     transition: .4s;
   }
@@ -405,7 +386,6 @@ table, th, td {
     display: none;
   }
   .nav__menu {
-	  background-color: var(--m-color);
 	  transition: background 0.3s, color 0.3s;
 	}
 }
@@ -417,7 +397,6 @@ table, th, td {
     column-gap: 3rem;
   }
   .nav__menu {
-	  background-color: var(--m-color);
 	  transition: background 0.3s, color 0.3s;
 	}
 }
@@ -438,6 +417,10 @@ table, th, td {
   .nav__icon {
     display: none;
   }
+  .nav__menu {
+	  background-color: transparent;
+	  transition: background 0.3s, color 0.3s;
+	}
   .nav__name {
     font-size: var(--normal-font-size);
     /* display: block; */ /* Minimalist design, visible labels */
