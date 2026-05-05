@@ -118,6 +118,7 @@ body {
 /*=============== TEXT ===============*/
   h1 {
 	color: var(--primary-color);
+	  text-align: center;
   }
   h2 {
 	color: var(--text-color);
@@ -214,7 +215,6 @@ h1 {
 	font-family: 'Quicksand', sans-serif;
 	font-weight: 700;
     font-size: 250%;
-	text-align: center;
   margin-top: 5%;
   margin-right: 5%;
   margin-left: 5%;
