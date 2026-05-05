@@ -1,3 +1,16 @@
+function updateThemeColorMeta() {
+    const bgColor = getComputedStyle(document.documentElement).getPropertyValue('--header-bg').trim();
+    let meta = document.querySelector('meta[name="theme-color"]');
+    
+    if (!meta) {
+        meta = document.createElement('meta');
+        meta.name = 'theme-color';
+        document.head.appendChild(meta);
+    }
+    
+    meta.content = bgColor;
+}
+
 (function() {
             // ---- DOM elemek ----
             const popup = document.getElementById('themePopup');
@@ -48,6 +61,7 @@
                 localStorage.setItem('themeColor', color);
                 localStorage.setItem('themeMode', mode);
                 applyTheme(color, mode);
+    updateThemeColorMeta(); // <-- Új sor hozzáadása
             }
 
             // ---- Betöltés ----
@@ -114,4 +128,9 @@ const szin = stilus.getPropertyValue('--header-bg').trim();
 
 // Beállítjuk a fejléc színét
 document.querySelector('meta[name="theme-color"]').setAttribute("content", szin);
+
+document.addEventListener('DOMContentLoaded', () => {
+    // ... a többi inicializáló kód ...
+    updateThemeColorMeta();
+});
         })();
