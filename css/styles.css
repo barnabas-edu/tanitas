@@ -42,8 +42,8 @@ body {
 	.wrapper {
     background-color: var(--bg-color);
 	transition: background 0.3s;
-	min-height: 100vh; /* Kitölti a teljes nézetmagasságot */
-    padding: 20px;
+	/* min-height: 100vh; /* Kitölti a teljes nézetmagasságot */
+    padding: 20px; */
 	}
 	  
   main {
