@@ -4,7 +4,11 @@
             const menuButton = document.getElementById('themeMenuButton');
             const modeOptions = document.querySelectorAll('#modeOptions .option');
             const colorOptions = document.querySelectorAll('#colorOptions .color-option');
-            const footerInfo = document.getElementById('footerInfo');
+            // Ezt a sort:
+            // const footerInfo = document.getElementById('footerInfo');
+
+            // Írd át erre:
+            const footerInfo = document.getElementById('footerInfo') || { textContent: '' };
 
             // ---- Állapotok ----
             const colorDisplayNames = {
