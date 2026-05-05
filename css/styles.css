@@ -176,6 +176,17 @@ img {
   /*height: 300px;  Should be removed. Only for demonstration */
 }
 
+.card-column {
+  float: left;
+  width: 50%;
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  /*height: 300px;  Should be removed. Only for demonstration */
+}
+
 /* Clear floats after the columns */
 .row:after {
   content: "";
@@ -186,6 +197,11 @@ img {
 /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 767px) {
   .column {
+    width: 100%;
+  }
+}
+
+.card-column {
     width: 100%;
   }
 }
