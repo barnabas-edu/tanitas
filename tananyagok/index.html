@@ -1,45 +1,36 @@
 <!DOCTYPE html>
 <html lang="hu">
 <head>
-    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-	<title>Tananyagok</title>
-  <link rel="stylesheet" href="/tanitas/css/styles.css">
+        <meta charset="utf-8">
+        <meta name="author" content="Horváth Barnabás">
+        <meta name="description" content="Horváth Barnabás tanítási honlapja">
+        <meta name="keywords" content="HorváthBarnabás, Horváth, Barnabás, Horvath, Barnabas, Horvath Barnabas, HB, tanítás, tanitas, teaching, teach">
+        <meta content="#1658ae" name="msapplication-TileColor">
+	<meta content="#1658ae" name="theme-color">
+	<link rel="shortcut icon" href="favicon.ico">
+        <title>Horváth Barnabás Oldala</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/theme-switcher.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
-
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
 	<meta name="theme-color" content="">
-	<script>
-document.addEventListener("DOMContentLoaded", function () {
-  const themeColor = getComputedStyle(document.documentElement)
-    .getPropertyValue('--header-color')
-    .trim();
-
-  let metaTag = document.querySelector('meta[name="theme-color"]');
-  if (!metaTag) {
-    metaTag = document.createElement('meta');
-    metaTag.name = "theme-color";
-    document.head.appendChild(metaTag);
-  }
-
-  metaTag.setAttribute("content", themeColor);
-});
-</script>
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta content="var(--header-color)" name="msapplication-TileColor">
-	</head>
+    <meta content="var(--header-bg)" name="msapplication-TileColor">
+</head>
 <body>
 	<div class="wrapper">
-<script src="/tanitas/js/headerFooterManager.js"></script>
+<script src="js/headerFooterManager.js"></script>
 	<my-header></my-header>
-	<script src="/tanitas/js/theme.js"></script>
 <main>
 <h1>Tananyagok</h1>
 <p>Itt témakörönként hasznos segédletek találhatóak, viszont <a href="tankonyvek.html">erre</a> vannak hasznos tankönyvek is.</p>
 <div class="row">
-  <div class="column" /*style="background-color:#aaa;"*/>
+  <div class="card-column">
     <h2>Matematika</h2>
     <p>- algebra<br>- geometria<br>- függvények</p>
+    <button class="btn">Tovább...</button>
   </div>
   <div class="column" /*style="background-color:#bbb;"*/>
     <h2>Kémia</h2>
@@ -48,8 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
 </div>
 </main>
 	</div>
+	<!-- <script src="theme-switcher.js"></script> -->
+	<script src="js/theme-switcher.js"></script>
 </body>
 </html>
-
-
-
