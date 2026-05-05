@@ -67,7 +67,7 @@ function updateThemeColorMeta() {
             // ---- Betöltés ----
             function loadSettings() {
                 const savedColor = localStorage.getItem('themeColor') || 'default';
-                const savedMode = localStorage.getItem('themeMode') || 'light';
+                const savedMode = localStorage.getItem('themeMode') || 'auto';
                 applyTheme(savedColor, savedMode);
             }
 
