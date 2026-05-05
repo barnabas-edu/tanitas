@@ -191,11 +191,6 @@ transition: all 0.2s;
             background: #2e7d32;
         }
 
-        main {
-            max-width: 1000px;
-            margin: 2rem auto;
-            padding: 0 1.5rem;
-        }
 
         .card-container {
             display: grid;
