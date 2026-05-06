@@ -5,18 +5,6 @@
     -webkit-tap-highlight-color: transparent;
   }
 
-:root {
-      --bg: #ffffff;
-      --text: #000000;
-    }
-
-@media (prefers-color-scheme: dark) {
-      :root {
-        --bg: #111111;
-        --text: #ffffff;
-      }
-}
-
 html {
   scroll-behavior: smooth;
 }
@@ -344,7 +332,7 @@ table, th, td {
     padding: 0 1rem;
     display: grid;
     align-items: center;
-    border-radius: 1.25rem 1.25rem 0 0;
+    border-radius: var(--rnav);
     transition: .4s;
   }
 }
