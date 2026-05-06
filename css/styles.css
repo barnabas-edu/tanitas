@@ -36,12 +36,12 @@ body {
       position: relative;
       margin-top: 0px;
       margin-bottom: 0px;
-      transition: background 0.3s, color 0.3s;
+      transition: background 0.2s, color 0.2s;
 }
 	
 	.wrapper {
     background-color: var(--bg-color);
-	transition: background 0.3s;
+	transition: background 0.2s;
 	/* min-height: 100vh; /* Kitölti a teljes nézetmagasságot */
     padding: 20px; */
 	}
@@ -52,11 +52,11 @@ body {
     position: relative;
     margin-top: 100px;
     margin-bottom: 80px;
-	transition: background 0.3s, color 0.3s;
+	transition: background 0.2s, color 0.2s;
 	}
   .header {
     background-color: var(--header-bg);
-	transition: background 0.3s, color 0.3s;
+	transition: background 0.2s, color 0.2s;
     }
 	
 	.navbar {
@@ -69,15 +69,15 @@ body {
 }
 	
   .nav__menu {
-	  transition: background 0.3s, color 0.3s;
+	  transition: background 0.2s, color 0.2s;
 	}
   .nav__logo {
 		color: var(--header-logo);
-		transition: background 0.3s, color 0.3s;
+		transition: background 0.2s, color 0.2s;
 		}
   .nav__link {
 	color: var(--header-text);
-	transition: background 0.3s, color 0.3s;
+	transition: background 0.2s, color 0.2s;
 	}
 
 .quicksand-<uniquifier> {
@@ -406,7 +406,7 @@ table, th, td {
     display: none;
   }
   .nav__menu {
-	  transition: background 0.3s, color 0.3s;
+	  transition: background 0.2s, color 0.2s;
 	}
 }
 
@@ -417,7 +417,7 @@ table, th, td {
     column-gap: 3rem;
   }
   .nav__menu {
-	  transition: background 0.3s, color 0.3s;
+	  transition: background 0.2s, color 0.2s;
 	}
 }
 
@@ -439,7 +439,7 @@ table, th, td {
   }
   .nav__menu {
 	  background-color: transparent;
-	  transition: background 0.3s, color 0.3s;
+	  transition: background 0.2s, color 0.2s;
 	}
   .nav__name {
     font-size: var(--normal-font-size);
