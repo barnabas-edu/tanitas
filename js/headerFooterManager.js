@@ -54,7 +54,7 @@ class MyHeader extends HTMLElement {
                 <span class="color-option" data-color="default" title="Alapértelmezett"></span>
                 <span class="color-option" data-color="blue" title="Kék"></span>
                 <span class="color-option" data-color="green" title="Zöld"></span>
-				<span class="color-option" data-color="green" title="Valami"></span>
+				<span class="color-option" data-color="retro" title="Valami"></span>
             </div>
         </div>
     </header>
