@@ -13,6 +13,7 @@
         --popup-bg: #ffffff;
         --popup-shadow: 0 8px 24px rgba(0,0,0,0.15);
         --active-bg: #e9ecef;
+		--rnav: 1.25rem 1.25rem 0 0;
     }
 
     [data-color-theme="default"][data-mode="dark"] {
@@ -72,6 +73,23 @@
         --popup-shadow: 0 8px 24px rgba(0,100,0,0.4);
         --active-bg: #2b3d2b;
     }
+	[data-color-theme="retro"][data-mode="light"] {
+		--primary-color: #0000a8;
+        --primary-hover: #0000db;
+        --card-bg: #c0c7c8;
+        --border-color: #dfdfdf;
+        --active-bg: #bbdefb;
+		--bg-color: #008080;
+		--header-bg: #c0c0c0;
+		--popup-bg: #c0c7c8;
+		--popup-shadow: 0 0px 0px;
+		--header-logo: #0000a8;
+		--header-text: #000000;
+		--rnav: 0 0 0 0;
+		--text-color: #000000;
+	}
+	[data-color-theme="retro"][data-mode="dark"] {
+	}
 /* ===== TÉMA GOMB ÉS POPUP ===== */
 .theme-button {
 background: none;
