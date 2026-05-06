@@ -4,6 +4,8 @@
         --primary-color: #0d6efd;
         --primary-hover: #0b5ed7;
         --card-bg: #f8f9fa;
+		--card-bord: 1px solid; 
+		--rcard: 1rem;
         --border-color: #dee2e6;
         --bg-color: #ffffff;
         --text-color: #1a1a1a;
@@ -77,6 +79,8 @@
 		--primary-color: #0000a8;
         --primary-hover: #0000db;
         --card-bg: #c0c7c8;
+		--card-bord: 2px solid;
+		--rcard: 0;
         --border-color: #dfdfdf;
         --active-bg: #bbdefb;
 		--bg-color: #008080;
@@ -89,6 +93,8 @@
 		--text-color: #000000;
 	}
 	[data-color-theme="retro"][data-mode="dark"] {
+		--card-bord: 2px solid; 
+		--rnav: 0 0 0 0;
 	}
 /* ===== TÉMA GOMB ÉS POPUP ===== */
 .theme-button {
@@ -219,8 +225,8 @@ transition: all 0.2s;
 
         .card {
             background-color: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 1rem;
+            border: var(--card-bord) var(--border-color);
+            border-radius: var(--rcard);
             padding: 1.5rem;
             box-shadow: 0 2px 8px rgba(0,0,0,0.08);
         }
