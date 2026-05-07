@@ -45,7 +45,7 @@ class MyHeader extends HTMLElement {
             <div class="section-title" style="text-align: center">Mód</div>
             <div class="option-group" id="modeOptions">
 				<div class="option" data-mode="auto"><span class="material-symbols-outlined">routine</span> Auto</div>
-                <div class="option" data-mode="light"><svg class="material-symbols-outlined"><use href="icon/light_mode.svg"/></svg> Világos</div>
+                <div class="option" data-mode="light"><span class="material-symbols-outlined"><use href="icon/light_mode.svg"/></span> Világos</div>
                 <div class="option" data-mode="dark"><span class="material-symbols-outlined">dark_mode</span> Sötét</div>
             </div>
 
