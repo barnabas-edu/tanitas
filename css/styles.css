@@ -62,11 +62,13 @@ body {
 	}
   .nav__logo {
 		color: var(--header-logo);
+	    cursor: var(--pointer);
 		transition: background 0.2s, color 0.2s;
 		}
   .nav__link {
 	color: var(--header-text);
 	transition: background 0.2s, color 0.2s;
+	cursor: var(--pointer);
 	}
   .nav__link:hover {
     color: var(--first-color);
