@@ -91,7 +91,7 @@
 		--header-text: #000000;
 		--rnav: 0 0 0 0;
 		--text-color: #000000;
-		cursor: /tanitas/Cursors/W95/arrow.cur, auto;
+		cursor: url(/tanitas/Cursors/W95/arrow.cur), auto;
 	}
 	[data-color-theme="retro"][data-mode="dark"] {
 		--card-bord: 2px solid; 
