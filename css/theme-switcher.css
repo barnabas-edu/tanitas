@@ -102,7 +102,7 @@
 		--pointer: url(/tanitas/Cursors/W95/Cursor_15.cur), pointer;
 	}
 
-a, button,.nav__link,.nav__logo,.theme-button /* ... a többi fenti elem ... */ {
+a, button,.nav__link,.nav__logo, /* ... a többi fenti elem ... */ {
   cursor: var(--pointer);
 }
 /* ===== TÉMA GOMB ÉS POPUP ===== */
@@ -114,7 +114,7 @@ padding: 0.5rem 0.5rem;
 width: 2.5rem;
 height: 2.5rem;
 size: 20rem;
-cursor: pointer;
+cursor: var(--pointer);
 color: var(--text-color);
 background-color: var(--card-bg);
 transition: all 0.2s;
