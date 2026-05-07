@@ -7,7 +7,6 @@
 
 html {
   scroll-behavior: smooth;
-  background-color: red;
 }
 
 footer {
@@ -19,7 +18,7 @@ footer {
             margin-top: 3rem;
 }
 body {
-      background: red;
+      background: var(--bg-color);
       color: var(--text-color);
 	  height:100%; 
       position: relative;
