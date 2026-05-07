@@ -92,6 +92,11 @@
 		--rnav: 0 0 0 0;
 		--text-color: #000000;
 		cursor: url(/tanitas/Cursors/W95/arrow.cur), auto;
+		cursor: url(/tanitas/Cursors/W95/Cursor_15.cur), pointer;
+		cursor: url(/tanitas/Cursors/W95/help_win95.cur), help;
+		cursor: url(/tanitas/Cursors/W95/Cursor_3.cur), wait;
+		cursor: url(/tanitas/Cursors/W95/Cursor_11), no-drop;
+		cursor: url(/tanitas/Cursors/W95/Cursor_11), not-allowed;
 	}
 	[data-color-theme="retro"][data-mode="dark"] {
 		--card-bord: 2px solid; 
