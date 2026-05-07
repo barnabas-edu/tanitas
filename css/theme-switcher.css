@@ -100,7 +100,7 @@
 	}
 
 a, button, /* ... a többi fenti elem ... */ {
-  cursor: var(--cursor-pointer);
+  cursor: var(--pointer);
 }
 /* ===== TÉMA GOMB ÉS POPUP ===== */
 .theme-button {
