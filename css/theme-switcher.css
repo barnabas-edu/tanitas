@@ -99,7 +99,7 @@
 		--rnav: 0 0 0 0;
 	}
 
-a, button, /* ... a többi fenti elem ... */ {
+a, button,.nav__link,.nav__logo,.theme-button /* ... a többi fenti elem ... */ {
   cursor: var(--pointer);
 }
 /* ===== TÉMA GOMB ÉS POPUP ===== */
