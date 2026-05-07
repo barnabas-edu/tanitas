@@ -16,6 +16,7 @@
         --popup-shadow: 0 8px 24px rgba(0,0,0,0.15);
         --active-bg: #e9ecef;
 		--rnav: 1.25rem 1.25rem 0 0;
+		--pointer: pointer;
     }
 
     [data-color-theme="default"][data-mode="dark"] {
@@ -97,6 +98,8 @@
 	[data-color-theme="retro"][data-mode="dark"] {
 		--card-bord: 2px solid; 
 		--rnav: 0 0 0 0;
+		--cursor: url(/tanitas/Cursors/W95/arrow.cur), auto;
+		--pointer: url(/tanitas/Cursors/W95/Cursor_15.cur), pointer;
 	}
 
 a, button,.nav__link,.nav__logo,.theme-button /* ... a többi fenti elem ... */ {
