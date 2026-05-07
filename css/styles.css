@@ -3,11 +3,11 @@
 
 * {
     -webkit-tap-highlight-color: transparent;
-	cursor: var(--cursor);
   }
 
 html {
   scroll-behavior: smooth;
+  cursor: var(--cursor);
 }
 
 footer {
