@@ -18,6 +18,7 @@
 		--rnav: 1.25rem 1.25rem 0 0;
 		--cursor: auto;
 		--pointer: pointer;
+		--font: 'Quicksand', sans-serif;
     }
 
     [data-color-theme="default"][data-mode="dark"] {
@@ -33,6 +34,7 @@
         --popup-bg: #2d2d2d;
         --popup-shadow: 0 8px 24px rgba(0,0,0,0.6);
         --active-bg: #3d3d3d;
+		--font: 'Quicksand', sans-serif;
     }
 
     [data-color-theme="blue"][data-mode="light"] {
@@ -95,12 +97,14 @@
 		--text-color: #000000;
 		--cursor: url(/tanitas/Cursors/W95/arrow.cur), auto;
 		--pointer: url(/tanitas/Cursors/W95/Cursor_15.cur), pointer;
+		--font: Windows;
 	}
 	[data-color-theme="retro"][data-mode="dark"] {
 		--card-bord: 2px solid; 
 		--rnav: 0 0 0 0;
 		--cursor: url(/tanitas/Cursors/W95/arrow.cur), auto;
 		--pointer: url(/tanitas/Cursors/W95/Cursor_15.cur), pointer;
+		--font: Windows;
 	}
 
 a, button,.nav__link,.nav__logo, /* ... a többi fenti elem ... */ {
