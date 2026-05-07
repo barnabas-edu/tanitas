@@ -18,7 +18,7 @@ footer {
             margin-top: 3rem;
 }
 body {
-      background: var(--bg-color);
+      background: red;
       color: var(--text-color);
 	  height:100%; 
       position: relative;
