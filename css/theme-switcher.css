@@ -16,6 +16,7 @@
         --popup-shadow: 0 8px 24px rgba(0,0,0,0.15);
         --active-bg: #e9ecef;
 		--rnav: 1.25rem 1.25rem 0 0;
+		--cursor: auto;
 		--pointer: pointer;
     }
 
