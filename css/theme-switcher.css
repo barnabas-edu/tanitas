@@ -19,6 +19,7 @@
 		--cursor: auto;
 		--pointer: pointer;
 		--font: 'Quicksand', sans-serif;
+		--navshadow: ;
     }
 
     [data-color-theme="default"][data-mode="dark"] {
@@ -95,6 +96,8 @@
 		--header-text: #000000;
 		--rnav: 0 0 0 0;
 		--text-color: #000000;
+		--navshadow: 0px 1px 0px #d2d2d2, 0px 2px 0px #e4e4e4;
+		--navshadowb: 0px -1px 0px #d2d2d2, 0px -2px 0px #e4e4e4;
 		--cursor: url(/tanitas/Cursors/W95/arrow.cur), auto;
 		--pointer: url(/tanitas/Cursors/W95/Cursor_15.cur), pointer;
 		--font: Windows;
@@ -141,7 +144,7 @@ border: 1px solid var(--border-color);
 border-radius: 1rem;
 box-shadow: var(--popup-shadow);
 width: 260px;
-padding: 1.2rem;
+padding: 1rem;
 display: none;
 z-index: 200;
 backdrop-filter: blur(4px);
