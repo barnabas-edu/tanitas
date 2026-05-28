@@ -370,6 +370,9 @@ table, th, td {
 }
 
 @media screen and (max-width: 767px) {
+	.wrapper {
+        padding-bottom: 64px;
+    }
   .nav__menu {
 	background-color: var(--header-bg);
     position: fixed;
