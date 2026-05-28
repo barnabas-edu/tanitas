@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bejegyzések - Horváth Barnabás Oldala</title>
+  <style>
+    body { font-family: sans-serif; max-width: 800px; margin: 20px auto; padding: 0 20px; line-height: 1.6; }
+    h1 { margin-bottom: 25px; }
+    
+    .post-item {
+      display: flex;
+      gap: 15px;
+      border: 1px solid #ddd;
+      padding: 15px;
+      margin-bottom: 15px;
+      border-radius: 5px;
+      background: #fff;
+      transition: box-shadow 0.2s;
+    }
+    .post-item:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+    
+    .post-thumb {
+      flex-shrink: 0;
+      width: 160px;
+      height: 120px;
+      overflow: hidden;
+      border-radius: 4px;
+      background: #f0f0f0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .post-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .post-thumb .no-image {
+      color: #ccc;
+      font-size: 0.8em;
+      text-align: center;
+      padding: 10px;
+    }
+    
+    .post-text { flex: 1; }
+    .post-text h2 {
+      margin: 0 0 5px 0;
+      font-size: 1.2em;
+    }
+    .post-text h2 a {
+      color: #0066cc;
+      text-decoration: none;
+    }
+    .post-text h2 a:hover { text-decoration: underline; }
+    .post-date {
+      color: #999;
+      font-size: 0.85em;
+      display: block;
+      margin-bottom: 8px;
+    }
+    .post-snippet {
+      color: #555;
+      font-size: 0.95em;
+      margin: 0;
+      line-height: 1.4;
+    }
+    
+    /* Lapozás stílusok */
+    .pagination {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      margin-top: 30px;
+      padding: 20px 0;
+      border-top: 1px solid #eee;
+    }
+    
+    .pagination button {
+      padding: 8px 16px;
+      background: #0066cc;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 0.9em;
+      transition: background 0.2s;
+      min-width: 80px;
+    }
+    
+    .pagination button:hover:not(:disabled) {
+      background: #004c99;
+    }
+    
+    .pagination button:disabled {
+      background: #ccc;
+      cursor: not-allowed;
+    }
+    
+    .pagination .page-info {
+      color: #666;
+      font-size: 0.9em;
+      min-width: 120px;
+      text-align: center;
+    }
+    
+    .loading-indicator {
+      text-align: center;
+      padding: 40px;
+      color: #999;
+      font-style: italic;
+    }
+    
+    @media (max-width: 500px) {
+      .post-item { flex-direction: column; }
+      .post-thumb { width: 100%; height: auto; max-height: 200px; }
+      .pagination { flex-direction: column; gap: 5px; }
+      .pagination button { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <h1>Bejegyzések</h1>
+  <div id="postList">
+    <div class="loading-indicator">Bejegyzések betöltése...</div>
+  </div>
+  <div id="pagination" class="pagination" style="display: none;"></div>
+
+  <script>
+    const blogUrl = 'https://hb-oldala.blogspot.com';
+    const postsPerPage = 10;
+    let currentPage = 1;
+    let totalPosts = 0;
+    let totalPages = 0;
+
+    // Segédfüggvény az első kép kinyeréséhez a bejegyzés tartalmából
+    function extractFirstImage(content) {
+      if (!content) return null;
+      
+      const imgMatch = content.match(/<img[^>]+src="([^"]+)"/i);
+      if (imgMatch && imgMatch[1]) {
+        let imageUrl = imgMatch[1];
+        imageUrl = imageUrl.replace(/\/s\d+-c\//, '/s320/');
+        imageUrl = imageUrl.replace(/\/s\d+\//, '/s320/');
+        
+        if (imageUrl.startsWith('//')) {
+          imageUrl = 'https:' + imageUrl;
+        }
+        
+        return imageUrl;
+      }
+      return null;
+    }
+
+    // Segédfüggvény a rövid ID kinyeréséhez
+    function extractShortId(fullId) {
+      const match = fullId.match(/post-(\d+)/);
+      return match ? match[1] : fullId;
+    }
+
+    // Segédfüggvény a slug generálásához
+    function createSlug(title) {
+      return title
+        .toLowerCase()
+        .replace(/[^a-z0-9áéíóöőúüű\s-]/g, '')
+        .replace(/\s+/g, '-')
+        .replace(/-+/g, '-')
+        .replace(/^-+|-+$/g, '')
+        .substring(0, 50);
+    }
+
+    // Oldal betöltése
+    function loadPage(page) {
+      const startIndex = (page - 1) * postsPerPage + 1;
+      const feedUrl = `${blogUrl}/feeds/posts/default?max-results=${postsPerPage}&start-index=${startIndex}&alt=json-in-script&callback=handlePosts`;
+      
+      // Betöltés jelzése
+      document.getElementById('postList').innerHTML = '<div class="loading-indicator">Bejegyzések betöltése...</div>';
+      document.getElementById('pagination').style.display = 'none';
+      
+      // Régi script eltávolítása (ha van)
+      const oldScript = document.querySelector('script[data-feed]');
+      if (oldScript) {
+        oldScript.remove();
+      }
+      
+      // Új script létrehozása
+      const script = document.createElement('script');
+      script.src = feedUrl;
+      script.setAttribute('data-feed', 'true');
+      document.head.appendChild(script);
+    }
+
+    function handlePosts(data) {
+      const posts = data.feed.entry || [];
+      const postList = document.getElementById('postList');
+      
+      // Összes bejegyzés számának meghatározása
+      if (data.feed.openSearch$totalResults) {
+        totalPosts = parseInt(data.feed.openSearch$totalResults.$t);
+        totalPages = Math.ceil(totalPosts / postsPerPage);
+      }
+      
+      if (posts.length === 0) {
+        postList.innerHTML = '<div class="loading-indicator">Nincsenek bejegyzések ezen az oldalon.</div>';
+        return;
+      }
+      
+      postList.innerHTML = '';
+      
+      posts.forEach((post) => {
+        const title = post.title.$t;
+        const date = new Date(post.published.$t).toLocaleDateString('hu-HU');
+        const shortId = extractShortId(post.id.$t);
+        const slug = createSlug(title);
+        
+        // Jobb minőségű kép kinyerése
+        let imageUrl = null;
+        if (post.content && post.content.$t) {
+          imageUrl = extractFirstImage(post.content.$t);
+        }
+        
+        if (!imageUrl && post.media$thumbnail && post.media$thumbnail.url) {
+          imageUrl = post.media$thumbnail.url.replace(/\/s72-c\//, '/s320/');
+        }
+        
+        let snippet = '';
+        if (post.summary && post.summary.$t) {
+          snippet = post.summary.$t.replace(/<[^>]+>/g, '').trim();
+        } else if (post.content && post.content.$t) {
+          snippet = post.content.$t.replace(/<[^>]+>/g, '').trim().substring(0, 200);
+        }
+        if (snippet.length > 180) {
+          snippet = snippet.substring(0, 180) + '…';
+        }
+        
+        // Kép HTML generálása
+        let thumbnailHtml = '';
+        if (imageUrl) {
+          thumbnailHtml = `
+            <div class="post-thumb">
+              <img src="${imageUrl}" alt="${title}" loading="lazy">
+            </div>
+          `;
+        } else {
+          thumbnailHtml = `
+            <div class="post-thumb">
+              <div class="no-image">Nincs kép</div>
+            </div>
+          `;
+        }
+        
+        postList.innerHTML += `
+          <div class="post-item">
+            ${thumbnailHtml}
+            <div class="post-text">
+              <h2><a href="post.html?id=${shortId}&slug=${slug}">${title}</a></h2>
+              <span class="post-date">${date}</span>
+              <p class="post-snippet">${snippet}</p>
+            </div>
+          </div>
+        `;
+      });
+      
+      // Lapozó frissítése
+      updatePagination();
+    }
+
+    function updatePagination() {
+      const pagination = document.getElementById('pagination');
+      pagination.style.display = 'flex';
+      
+      const startPost = (currentPage - 1) * postsPerPage + 1;
+      const endPost = Math.min(currentPage * postsPerPage, totalPosts);
+      
+      pagination.innerHTML = `
+        <button onclick="goToPage(${currentPage - 1})" ${currentPage === 1 ? 'disabled' : ''}>
+          ← Előző
+        </button>
+        <span class="page-info">
+          ${startPost}-${endPost} / ${totalPosts} bejegyzés
+        </span>
+        <button onclick="goToPage(${currentPage + 1})" ${currentPage === totalPages ? 'disabled' : ''}>
+          Következő →
+        </button>
+      `;
+      
+      // Görgessünk a lap tetejére
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function goToPage(page) {
+      if (page < 1 || page > totalPages) return;
+      currentPage = page;
+      loadPage(page);
+    }
+
+    // Kezdőoldal betöltése
+    loadPage(1);
+  </script>
+</body>
+</html>
