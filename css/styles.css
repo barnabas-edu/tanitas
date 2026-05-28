@@ -32,22 +32,17 @@ body {
 	.wrapper {
     background-color: var(--bg-color);
 	transition: background 0.2s;
-	/* min-height: 100vh; /* Kitölti a teljes nézetmagasságot */
-    padding: 20px; */
+	min-height: 100vh;
 	}
 	  
   main {
     background-color: var(--bg-color);
 	height:100%; 
     position: relative;
-    margin-top: 100px;
-    margin-bottom: 80px;
+	max-width: 900px;
+    margin-inline: auto;
+	padding-inline: 1rem;
 	transition: background 0.2s, color 0.2s;
-	}
-  .header {
-    background-color: var(--header-bg);
-	transition: background 0.2s, color 0.2s;
-    }
 	
 	.navbar {
     display: flex;
@@ -301,13 +296,13 @@ table, th, td {
 /*=============== HEADER ===============*/
 .header {
     justify-content: space-between; /* Elemek elosztása: bal-közép-jobb */
+	background-color: var(--header-bg);
     align-items: center; /* Függőleges középrezárás */
-  position: fixed;
+  position: sticky;
   top: 0;
-  left: 0;
   width: 100%;
   z-index: var(--z-fixed);
-  transition: .4s;
+  transition: background 0.2s, color 0.2s;
 }
 
 /*=============== NAV ===============*/
@@ -435,7 +430,6 @@ table, th, td {
     display: none;
   }
   .nav__menu {
-	  background-color: transparent;
 	  transition: background 0.2s, color 0.2s;
 	}
   .nav__name {
