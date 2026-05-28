@@ -1,9 +1,19 @@
 <!DOCTYPE html>
 <html lang="hu">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bejegyzések - Horváth Barnabás Oldala</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+        <meta charset="utf-8">
+        <meta name="author" content="Horváth Barnabás">
+        <meta name="description" content="Horváth Barnabás tanítási honlapja">
+        <meta name="keywords" content="HorváthBarnabás, Horváth, Barnabás, Horvath, Barnabas, Horvath Barnabas, HB, tanítás, tanitas, teaching, teach">
+        <meta content="#1658ae" name="msapplication-TileColor">
+      	<meta content="#1658ae" name="theme-color">
+      	<link rel="icon" type="image/png" href="theme/favicon-96x96.png" sizes="96x96" />
+        <link rel="icon" type="image/svg+xml" href="theme/favicon.svg" />
+        <link rel="shortcut icon" href="theme/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="180x180" href="theme/apple-touch-icon.png" />
+        <meta name="apple-mobile-web-app-title" content="MyWebSite" />
+  <title>Blog bejegyzések | Horváth Barnabás Oldala</title>
   <style>
     body { font-family: sans-serif; max-width: 800px; margin: 20px auto; padding: 0 20px; line-height: 1.6; }
     h1 { margin-bottom: 25px; }
@@ -120,8 +130,20 @@
       .pagination button { width: 100%; }
     }
   </style>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/theme-switcher.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+	<meta name="theme-color" content="">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta content="var(--header-bg)" name="msapplication-TileColor">
 </head>
 <body>
+<div class="wrapper">
+  <script src="js/headerFooterManager.js"></script>
+	<my-header></my-header>
+<main>
   <h1>Bejegyzések</h1>
   <div id="postList">
     <div class="loading-indicator">Bejegyzések betöltése...</div>
@@ -300,5 +322,8 @@
     // Kezdőoldal betöltése
     loadPage(1);
   </script>
+</main>
+</div>
+<script src="js/theme-switcher.js"></script>
 </body>
 </html>
