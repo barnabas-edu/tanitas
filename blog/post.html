@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+        <meta charset="utf-8">
+        <meta name="author" content="Horváth Barnabás">
+        <meta name="description" content="Horváth Barnabás tanítási honlapja">
+        <meta name="keywords" content="HorváthBarnabás, Horváth, Barnabás, Horvath, Barnabas, Horvath Barnabas, HB, tanítás, tanitas, teaching, teach">
+        <meta content="#1658ae" name="msapplication-TileColor">
+      	<meta content="#1658ae" name="theme-color">
+      	<link rel="icon" type="image/png" href="theme/favicon-96x96.png" sizes="96x96" />
+        <link rel="icon" type="image/svg+xml" href="theme/favicon.svg" />
+        <link rel="shortcut icon" href="theme/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="180x180" href="theme/apple-touch-icon.png" />
+        <meta name="apple-mobile-web-app-title" content="MyWebSite" />
+  <title>Blog bejegyzés | Horváth Barnabás Oldala</title>
+  <style>
+    body { font-family: sans-serif; max-width: 800px; margin: 20px auto; padding: 0 20px; line-height: 1.6; }
+    #postContent {
+      border: 1px solid #eee;
+      padding: 20px;
+      border-radius: 5px;
+      background: #f9f9f9;
+    }
+    #postTitle { margin-top: 0; }
+    .post-date {
+      color: #999;
+      font-size: 0.9em;
+      display: block;
+      margin-bottom: 20px;
+    }
+    #postBody img { max-width: 100%; height: auto; border-radius: 4px; }
+    #backButton {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 8px 15px;
+      background: #0066cc;
+      color: white;
+      text-decoration: none;
+      border-radius: 4px;
+      font-size: 0.9em;
+    }
+    #backButton:hover { background: #004c99; }
+    .error-message {
+      text-align: center;
+      padding: 40px;
+      color: #666;
+    }
+    .loading {
+      text-align: center;
+      padding: 40px;
+      color: #999;
+    }
+  </style>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/theme-switcher.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+	<meta name="theme-color" content="">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta content="var(--header-bg)" name="msapplication-TileColor">
+</head>
+<body>
+<div class="wrapper">
+  <script src="js/headerFooterManager.js"></script>
+	<my-header></my-header>
+<main>
+  <div id="postContent">
+    <div class="loading">Bejegyzés betöltése...</div>
+  </div>
+  <a href="index.html" id="backButton">← Vissza a bejegyzésekhez</a>
+
+  <script>
+    const blogUrl = 'https://hb-oldala.blogspot.com';
+    
+    // URL paraméterek kiolvasása
+    const urlParams = new URLSearchParams(window.location.search);
+    const shortId = urlParams.get('id');
+    
+    if (!shortId) {
+      document.getElementById('postContent').innerHTML = '<div class="error-message">Nincs megadott bejegyzés azonosító.</div>';
+    } else {
+      // Az összes bejegyzés betöltése
+      const feedUrl = `${blogUrl}/feeds/posts/default?max-results=50&alt=json-in-script&callback=findPost`;
+      
+      const script = document.createElement('script');
+      script.src = feedUrl;
+      document.head.appendChild(script);
+    }
+
+    function findPost(data) {
+      const posts = data.feed.entry || [];
+      
+      // Megkeressük azt a bejegyzést, aminek az ID-ja tartalmazza a shortId-t
+      const post = posts.find(p => p.id.$t.includes(`post-${shortId}`));
+      
+      if (!post) {
+        document.getElementById('postContent').innerHTML = '<div class="error-message">A bejegyzés nem található. Lehet, hogy törölve lett vagy módosult az azonosítója.</div>';
+        return;
+      }
+      
+      // Oldal címének beállítása
+      document.title = `${post.title.$t} - Horváth Barnabás Oldala`;
+      
+      // Tartalom megjelenítése
+      document.getElementById('postContent').innerHTML = `
+        <h2 id="postTitle">${post.title.$t}</h2>
+        <span class="post-date">${new Date(post.published.$t).toLocaleDateString('hu-HU', {
+          year: 'numeric',
+          month: 'long',
+          day: 'numeric'
+        })}</span>
+        <div id="postBody">${post.content.$t}</div>
+      `;
+      
+      // Ha van slug az URL-ben, akkor azt is felhasználhatjuk a cím beállításához
+      const slug = urlParams.get('slug');
+      if (slug) {
+        // Opcionálisan használhatjuk a slug-ot meta tagekhez vagy egyebekhez
+        document.querySelector('meta[name="description"]')?.setAttribute('content', `${post.title.$t} - Olvasd el a teljes bejegyzést!`);
+      }
+    }
+  </script>
+</main>
+</div>
+<script src="js/theme-switcher.js"></script>
+</body>
+</html>
