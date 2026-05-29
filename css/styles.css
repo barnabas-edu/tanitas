@@ -76,7 +76,36 @@ div#postList {
     grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
     gap: 1rem;
     margin-top: 1rem;
-    margin-bottom: 2rem;
+}
+
+.pagination {
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 20px 0;
+}
+
+.pagination button {
+    padding: 6px 12px;
+    background: #0066cc;
+    color: white;
+    border: none;
+    min-width: 80px;
+    border-radius: 1rem;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: background 0.2s;
+}
+
+.pagination button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+.pagination .page-info {
+    color: #666;
+    font-size: 14px;
+    text-align: center;
 }
 
 .post-thumb {
