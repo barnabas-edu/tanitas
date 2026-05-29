@@ -260,13 +260,13 @@
       
       pagination.innerHTML = `
         <button onclick="goToPage(${currentPage - 1})" ${currentPage === 1 ? 'disabled' : ''}>
-          ← Előző
+          🠄 Előző oldal
         </button>
         <span class="page-info">
           ${startPost}-${endPost} / ${totalPosts} bejegyzés
         </span>
         <button onclick="goToPage(${currentPage + 1})" ${currentPage === totalPages ? 'disabled' : ''}>
-          Következő →
+          Következő oldal 🠆
         </button>
       `;
       
