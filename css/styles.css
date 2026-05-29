@@ -9,7 +9,7 @@
 html {
   	scroll-behavior: smooth;
   	cursor: var(--cursor);
-	scrollbar-gutter: stable;
+	overflow-y: scroll;
 }
 
 footer {
