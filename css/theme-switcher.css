@@ -249,9 +249,9 @@ transition: all 0.2s;
 			transition: all 0.2s;
         }
 
-		.card:hover {
-		    transform: translateY(calc(-1 * var(--rcard)));
-		}
+.card:hover {
+	transform: translateY(calc(-1 / 2 * var(--rcard)));
+}
 
         .card h3 { color: var(--primary-color); margin-bottom: 0.8rem; }
         .btn {
