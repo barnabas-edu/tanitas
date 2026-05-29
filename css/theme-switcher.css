@@ -246,7 +246,12 @@ transition: all 0.2s;
             border-radius: var(--rcard);
             padding: 1rem;
             box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+			transition: all 0.2s;
         }
+
+		.card:hover {
+		    transform: translateY(calc(-1 * var(--rcard)));
+		}
 
         .card h3 { color: var(--primary-color); margin-bottom: 0.8rem; }
         .btn {
